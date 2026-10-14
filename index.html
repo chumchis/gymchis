@@ -570,6 +570,8 @@ function meView() {
 async function exportData() {
   const name = `gymchis-${new Date().toLocaleDateString('sv')}.json`; // sv = YYYY-MM-DD in local time
   const file = new File([JSON.stringify({ app: 'gymchis', version: 1, exportedAt: new Date().toISOString(), profile: S.profile, plan: S.plan, history: S.history })], name, { type: 'application/json' });
+  const dl = ON_CLAUDE && await claude.use('downloads'); // claude.ai runs the page sandboxed and asks before saving
+  if (dl) { try { await dl.save({ filename: name, data: file }); } catch {} return; } // declined or unavailable: nothing to do
   if (navigator.canShare?.({ files: [file] })) { // iPhone: share sheet with "Guardar en Archivos", AirDrop, WhatsApp…
     try { await navigator.share({ files: [file] }); return; } catch (e) { if (e.name === 'AbortError') return; }
   }
