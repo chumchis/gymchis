@@ -14,6 +14,7 @@ flags: 1/2/3/4 level (default 1: principiante, habitual, experto, coach) · t ti
        @equip  overrides the DB equipment
 """
 import json, subprocess, sys, urllib.request
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -361,6 +362,15 @@ EQUIP_FIX = {"calf-stretch-with-rope": "rope", "reclining-big-toe-pose-with-rope
              "standing-hamstring-and-calf-stretch-with-strap": "rope", "battling-ropes": "other"}
 
 
+def load_names():
+    """names_es.txt: hand-translated Spanish names for every non-curated exercise."""
+    rows = [l.split("|") for l in (HERE / "names_es.txt").read_text().splitlines() if l.strip() and not l.startswith("#")]
+    return {slug.strip(): name.strip() for slug, name in rows}
+
+
+NAMES = load_names()
+
+
 def infer(e):
     """Level and flags for a non-curated exercise (heuristic over slug and category)."""
     s, cat = e["slug"], e["category"]
@@ -368,7 +378,7 @@ def infer(e):
     tok = set(s.split("-"))
     lv = level(e)
     jump = cat == "plyometrics" or bool(tok & JUMPS) or has(s, ["jump-rope"])
-    row = {"id": s, "n": e["name"], "m": e["muscle"], "e": eq, "l": max(lv, 2) if jump else lv,
+    row = {"id": s, "n": NAMES[s], "m": e["muscle"], "e": eq, "l": max(lv, 2) if jump else lv,
            "i": e["instructions"], "f": e["file"]}
     flags = {"s": cat == "stretching" or bool(tok & {"stretch", "pose"}) and not tok & {"weighted", "lunge"},
              "c": cat == "cardio",
@@ -421,6 +431,10 @@ def main():
     rows += [infer(e) for s, e in db.items() if s not in {r["id"] for r in rows}]
     ids = [r["id"] for r in rows]
     assert len(ids) == len(set(ids)) == len(db), "every DB exercise exactly once"
+    assert not set(NAMES) - set(db), f"names_es.txt has unknown slugs: {sorted(set(NAMES) - set(db))}"
+    assert not set(NAMES) & {r["id"] for r in rows if r.get("core")}, "curated names live in CURATED"
+    dupes = [n for n, c in Counter(r["n"] for r in rows).items() if c > 1]
+    assert not dupes, f"two exercises share a name: {dupes}"
 
     (HERE / "img").mkdir(exist_ok=True)
     with ThreadPoolExecutor(8) as pool:

@@ -1,0 +1,1127 @@
+# Nombres en español para los ejercicios no curados (los curados viven en build.py).
+# Formato: slug | Nombre
+# Abdomen
+3-4-sit-up | Abdominal a tres cuartos
+45-side-bend | Inclinación lateral en banco a 45°
+arm-slingers-hanging-bent-knee-legs | Elevación de rodillas colgado con correas
+arm-slingers-hanging-straight-legs | Elevación de piernas rectas colgado con correas
+arms-overhead-full-sit-up-male | Abdominal completo con brazos arriba
+assisted-hanging-knee-raise-with-throw-down | Elevación de rodillas colgado con empuje del compañero
+assisted-hanging-knee-raise | Elevación de rodillas colgado asistida
+assisted-lying-leg-raise-with-lateral-throw-down | Elevación de piernas acostado con empuje lateral del compañero
+assisted-lying-leg-raise-with-throw-down | Elevación de piernas acostado con empuje del compañero
+assisted-motion-russian-twist | Giro ruso asistido
+assisted-prone-rectus-femoris-stretch | Estiramiento del recto femoral boca abajo con ayuda
+assisted-sit-up | Abdominal asistido
+band-alternating-v-up | V-up alterno con banda
+band-assisted-wheel-rollerout | Rueda abdominal asistida con banda
+band-bicycle-crunch | Bicicleta abdominal con banda
+band-jack-knife-sit-up | Navaja con banda
+band-kneeling-twisting-crunch | Crunch con giro de rodillas con banda
+band-lying-straight-leg-raise | Elevación de pierna recta acostado con banda
+band-push-sit-up | Abdominal con empuje y banda
+band-seated-twist | Giro de torso sentado con banda
+band-standing-crunch | Crunch de pie con banda
+band-standing-twisting-crunch | Crunch con giro de pie con banda
+band-v-up | V-up con banda
+band-vertical-pallof-press | Press Pallof vertical con banda
+barbell-press-sit-up | Abdominal con press de barra
+barbell-rollerout-from-bench | Rodillo con barra desde banco
+barbell-rollerout | Rodillo con barra
+barbell-seated-twist | Giro de torso sentado con barra
+barbell-side-bent-v-2 | Inclinación lateral con barra
+barbell-sitted-alternate-leg-raise-female | Elevación alterna de piernas sentado con barra (variante)
+barbell-sitted-alternate-leg-raise | Elevación alterna de piernas sentado con barra
+barbell-standing-ab-rollerout | Rodillo con barra de pie
+barbell-standing-twist | Giro de torso de pie con barra
+bottoms-up | Elevación de cadera boca arriba (bottoms up)
+bridge-mountain-climber-cross-body | Escalador cruzado en plancha
+butt-ups | Elevación de glúteos en plancha
+cable-judo-flip | Lanzamiento de judo en polea
+cable-reverse-crunch | Crunch inverso en polea
+cable-russian-twists-on-stability-ball | Giro ruso en polea sobre fitball
+cable-seated-crunch | Crunch sentado en polea
+cable-seated-twist | Giro de torso sentado en polea
+cable-side-bend-crunch-bosu-ball | Crunch lateral en polea sobre bosu
+cable-side-bend | Inclinación lateral en polea
+cable-side-crunch | Crunch lateral en polea
+cable-standing-crunch-with-rope-attachment | Crunch de pie en polea con cuerda
+cable-standing-crunch | Crunch de pie en polea
+cable-standing-lift | Leñador ascendente en polea
+cable-tuck-reverse-crunch | Crunch inverso recogido en polea
+cable-twist-up-down | Giro de torso en polea de arriba abajo
+captains-chair-straight-leg-raise | Elevación de piernas rectas en silla romana
+cocoons | Capullo (crunch completo)
+crab-twist-toe-touch | Toque de pie cruzado en posición de cangrejo
+crunch-hands-overhead | Crunch con brazos arriba
+crunch-on-stability-ball-arms-straight | Crunch en fitball con brazos estirados
+curl-up | Curl-up abdominal
+decline-crunch | Crunch declinado
+decline-sit-up | Abdominal en banco declinado
+flag | Bandera humana
+flexion-leg-sit-up-bent-knee | Abdominal con rodillas flexionadas
+flexion-leg-sit-up-straight-arm | Abdominal con brazos estirados
+frog-crunch | Crunch de rana
+frog-planche | Planche de rana
+front-lever | Front lever
+full-maltese | Maltesa completa
+full-planche | Planche completa
+gorilla-chin | Dominada gorila con elevación de rodillas
+groin-crunch | Crunch con rodillas abiertas
+half-sit-up-male | Medio abdominal
+hanging-leg-hip-raise | Elevación de piernas y cadera colgado
+hanging-oblique-knee-raise | Elevación oblicua de rodillas colgado
+hanging-pike | Elevación en pica colgado
+hanging-straight-leg-hip-raise | Elevación de piernas rectas y cadera colgado
+hanging-straight-leg-raise | Elevación de piernas rectas colgado
+hanging-straight-twisting-leg-hip-raise | Elevación de piernas rectas con giro colgado
+hip-raise-bent-knee | Elevación de cadera con rodillas flexionadas
+inchworm-v-2 | Caminata de manos (variante)
+incline-leg-hip-raise-leg-straight | Elevación de piernas rectas y cadera en banco inclinado
+incline-twisting-sit-up | Abdominal con giro en banco inclinado
+janda-sit-up | Abdominal Janda
+kettlebell-advanced-windmill | Molino avanzado con kettlebell
+kettlebell-bent-press | Press lateral inclinado con kettlebell
+kettlebell-double-windmill | Molino doble con kettlebell
+kettlebell-figure-8 | Figura de ocho con kettlebell
+kettlebell-windmill | Molino con kettlebell
+knee-touch-crunch | Crunch tocando las rodillas
+l-sit-on-floor | L-sit en el suelo
+landmine-180 | Giro de 180° con barra anclada (landmine)
+lean-planche | Planche inclinada
+leg-pull-in-flat-bench | Encogimiento de piernas en banco plano
+lever-kneeling-twist | Giro de torso de rodillas en máquina
+lever-seated-crunch-chest-pad | Crunch sentado en máquina con apoyo de pecho
+lever-seated-crunch-v-2 | Crunch en máquina (variante)
+lever-seated-leg-raise-crunch | Crunch con elevación de piernas en máquina
+lunge-with-twist | Zancada con giro de torso
+lying-elbow-to-knee | Codo a rodilla acostado
+lying-leg-hip-raise | Elevación de piernas y cadera acostado
+negative-crunch | Crunch negativo
+oblique-crunch-v-2 | Crunch oblicuo (variante)
+one-arm-slam-with-medicine-ball | Lanzamiento al suelo a una mano con balón medicinal
+otis-up | Abdominal Otis con disco
+pelvic-tilt | Basculación pélvica
+posterior-step-to-overhead-reach | Paso atrás con brazos arriba
+potty-squat | Sentadilla profunda (potty squat)
+prisoner-half-sit-up-male | Medio abdominal con manos en la nuca
+prone-twist-on-stability-ball | Giro boca abajo en fitball
+pull-in-on-stability-ball | Encogimiento de rodillas en fitball
+push-up-to-side-plank | Flexión a plancha lateral
+quarter-sit-up | Cuarto de abdominal
+reverse-plank-with-leg-lift | Plancha invertida con elevación de pierna
+roller-body-saw | Serrucho en rodillo
+roller-reverse-crunch | Crunch inverso en rodillo
+seated-side-crunch-wall | Crunch lateral sentado contra la pared
+side-hip-on-parallel-bars | Elevación lateral de cadera en paralelas
+side-to-side-toe-touch-male | Toque de pies de lado a lado
+sit-up-with-arms-on-chest | Abdominal con brazos cruzados al pecho
+sledge-hammer | Golpe con mazo a neumático
+smith-hip-raise | Elevación de cadera en Smith
+spell-caster | Giro de torso con mancuernas (spell caster)
+spine-twist | Giro de columna
+stability-ball-crunch-full-range-hands-behind-head | Crunch completo en fitball con manos en la nuca
+standing-wheel-rollerout | Rueda abdominal de pie
+straddle-maltese | Maltesa con piernas abiertas
+straddle-planche | Planche con piernas abiertas
+suspended-abdominal-fallout | Rollout abdominal en suspensión (TRX)
+suspended-reverse-crunch | Crunch inverso en suspensión (TRX)
+tuck-crunch | Crunch recogido
+twisted-leg-raise-female | Elevación de piernas con giro (variante)
+twisted-leg-raise | Elevación de piernas con giro
+v-sit-on-floor | V-sit en el suelo
+vertical-leg-raise-on-parallel-bars | Elevación de piernas en paralelas
+weighted-crunch | Crunch con peso
+weighted-decline-sit-up | Abdominal declinado con peso
+weighted-hanging-leg-hip-raise | Elevación de piernas y cadera colgado con peso
+weighted-overhead-crunch-on-stability-ball | Crunch con peso sobre la cabeza en fitball
+weighted-russian-twist-legs-up | Giro ruso con peso y piernas elevadas
+weighted-russian-twist-v-2 | Giro ruso con peso (variante)
+weighted-seated-twist-on-stability-ball | Giro de torso con peso sentado en fitball
+weighted-side-bend-on-stability-ball | Inclinación lateral con peso en fitball
+wind-sprints | Carrera acostado (wind sprints)
+# Aductores
+assisted-side-lying-adductor-stretch | Estiramiento de aductores de lado con ayuda
+side-plank-hip-adduction | Plancha lateral con aducción (Copenhague)
+# Gemelos
+ankle-circles | Círculos de tobillo
+assisted-lying-calves-stretch | Estiramiento de gemelos acostado con ayuda
+band-single-leg-reverse-calf-raise | Flexión dorsal de tobillo a una pierna con banda
+band-two-legs-calf-raise-band-under-both-legs-v-2 | Elevación de talones con banda bajo ambos pies
+barbell-floor-calf-raise | Elevación de talones con barra en el suelo
+barbell-seated-calf-raise-1371 | Elevación de talones sentado con barra (variante)
+barbell-seated-calf-raise | Elevación de talones sentado con barra
+barbell-standing-calf-raise | Elevación de talones de pie con barra
+barbell-standing-leg-calf-raise | Elevación de talones de pie con barra (variante)
+barbell-standing-rocking-leg-calf-raise | Balanceo de talones y puntas con barra
+box-jump-down-with-one-leg-stabilization | Bajada del cajón con aterrizaje a una pierna
+cable-standing-calf-raise | Elevación de talones de pie en polea
+cable-standing-one-leg-calf-raise | Elevación de talón a una pierna en polea
+calf-push-stretch-with-hands-against-wall | Estiramiento de gemelo empujando la pared
+calf-stretch-with-rope | Estiramiento de gemelo con cuerda
+circles-knee-stretch | Círculos de rodillas
+donkey-calf-raise | Elevación de talones tipo burro
+dumbbell-seated-calf-raise | Elevación de talones sentado con mancuernas
+dumbbell-seated-one-leg-calf-raise-hammer-grip | Elevación de talón sentado a una pierna con mancuerna, agarre neutro
+dumbbell-seated-one-leg-calf-raise-palm-up | Elevación de talón sentado a una pierna con mancuerna, palma arriba
+dumbbell-seated-one-leg-calf-raise | Elevación de talón sentado a una pierna con mancuerna
+exercise-ball-on-the-wall-calf-raise-tennis-ball-between-ankles | Elevación de talones con fitball en la pared y pelota entre los tobillos
+exercise-ball-on-the-wall-calf-raise-tennis-ball-between-knees | Elevación de talones con fitball en la pared y pelota entre las rodillas
+exercise-ball-on-the-wall-calf-raise | Elevación de talones con fitball en la pared
+hack-calf-raise | Elevación de talones en máquina hack
+hack-one-leg-calf-raise | Elevación de talón a una pierna en máquina hack
+lever-calf-press | Prensa de gemelos en máquina
+lever-donkey-calf-raise | Elevación de talones tipo burro en máquina
+lever-rotary-calf | Gemelos en máquina rotatoria
+lever-seated-calf-press | Prensa de gemelos sentado en máquina
+lever-seated-squat-calf-raise-on-leg-press-machine | Elevación de talones en sentadilla en prensa
+one-leg-donkey-calf-raise | Elevación de talón tipo burro a una pierna
+one-leg-floor-calf-raise | Elevación de talón a una pierna en el suelo
+peroneals-stretch | Estiramiento de peroneos
+posterior-tibialis-stretch | Estiramiento del tibial posterior
+seated-calf-stretch-male | Estiramiento de gemelo sentado
+single-leg-calf-raise-on-a-dumbbell | Elevación de talón a una pierna sobre una mancuerna
+sled-45-calf-press | Gemelos en prensa 45°
+sled-forward-angled-calf-raise | Elevación de talones inclinado en máquina
+sled-lying-calf-press | Prensa de gemelos acostado
+sled-one-leg-calf-press-on-leg-press | Gemelos a una pierna en prensa
+smith-one-leg-floor-calf-raise | Elevación de talón a una pierna en Smith
+smith-reverse-calf-raises-1394 | Elevación de puntas en Smith (variante)
+smith-reverse-calf-raises | Elevación de puntas en Smith
+smith-seated-one-leg-calf-raise | Elevación de talón sentado a una pierna en Smith
+smith-standing-leg-calf-raise | Elevación de talones de pie en Smith
+smith-toe-raise | Elevación sobre las puntas en Smith
+standing-calf-raise-on-a-staircase | Elevación de talones en un escalón
+standing-calves-calf-stretch | Estiramiento de gemelos de pie
+standing-calves | Gemelos de pie
+weighted-donkey-calf-raise | Elevación de talones tipo burro con peso
+# Cardio
+astride-jumps-male | Saltos abriendo las piernas
+cycle-cross-trainer | Elíptica con brazos
+dumbbell-burpee | Burpee con mancuernas
+half-knee-bends-male | Medias flexiones de rodilla
+jack-burpee | Burpee con jumping jack
+push-to-run | Empuje y carrera
+run-equipment | Carrera en cinta
+semi-squat-jump-male | Salto en media sentadilla
+short-stride-run | Carrera de zancada corta
+ski-step | Paso de esquí
+stationary-bike-run-v-3 | Bicicleta estática de pie
+swing-360 | Balanceo de 360°
+wheel-run | Carrera con rueda abdominal
+# Antebrazos
+band-reverse-wrist-curl | Curl de muñeca inverso con banda
+band-wrist-curl | Curl de muñeca con banda
+barbell-palms-down-wrist-curl-over-a-bench | Curl de muñeca con palmas abajo sobre banco con barra
+barbell-palms-up-wrist-curl-over-a-bench | Curl de muñeca con palmas arriba sobre banco con barra
+barbell-revers-wrist-curl-v-2 | Curl de muñeca inverso con barra (variante)
+barbell-reverse-wrist-curl | Curl de muñeca inverso con barra
+barbell-standing-back-wrist-curl | Curl de muñeca por detrás de pie con barra
+barbell-wrist-curl-v-2 | Curl de muñeca con barra (variante)
+barbell-wrist-curl | Curl de muñeca con barra
+cable-reverse-wrist-curl | Curl de muñeca inverso en polea
+cable-standing-back-wrist-curl | Curl de muñeca por detrás de pie en polea
+cable-wrist-curl | Curl de muñeca en polea
+dumbbell-finger-curls | Curl de dedos con mancuerna
+dumbbell-lying-pronation-on-floor | Pronación con mancuerna acostado en el suelo
+dumbbell-lying-pronation | Pronación con mancuerna acostado
+dumbbell-lying-supination-on-floor | Supinación con mancuerna acostado en el suelo
+dumbbell-lying-supination | Supinación con mancuerna acostado
+dumbbell-one-arm-reverse-wrist-curl | Curl de muñeca inverso a una mano con mancuerna
+dumbbell-one-arm-seated-neutral-wrist-curl | Curl de muñeca neutro sentado a una mano con mancuerna
+dumbbell-one-arm-wrist-curl | Curl de muñeca a una mano con mancuerna
+dumbbell-over-bench-one-arm-reverse-wrist-curl | Curl de muñeca inverso a una mano sobre banco
+dumbbell-over-bench-one-arm-wrist-curl | Curl de muñeca a una mano sobre banco
+dumbbell-over-bench-revers-wrist-curl | Curl de muñeca inverso con mancuernas sobre banco
+dumbbell-over-bench-wrist-curl | Curl de muñeca con mancuernas sobre banco
+dumbbell-reverse-wrist-curl | Curl de muñeca inverso con mancuernas
+dumbbell-seated-one-arm-rotate | Rotación de antebrazo sentado con mancuerna
+dumbbell-seated-palms-up-wrist-curl | Curl de muñeca sentado con palmas arriba
+finger-curls | Curl de dedos
+kettlebell-alternating-hang-clean | Cargada colgante alterna con kettlebell
+lever-gripper-hands | Prensión de manos en máquina
+modified-push-up-to-lower-arms | Flexión modificada sobre antebrazos
+side-wrist-pull-stretch | Estiramiento lateral de muñeca
+smith-seated-wrist-curl | Curl de muñeca sentado en Smith
+smith-standing-back-wrist-curl | Curl de muñeca por detrás de pie en Smith
+weighted-standing-hand-squeeze | Apretón de mano de pie con peso
+wrist-circles | Círculos de muñeca
+wrist-rollerer | Enrollador de muñeca
+# Cuello y serrato
+side-push-neck-stretch | Estiramiento lateral de cuello con empuje
+barbell-incline-shoulder-raise | Elevación escapular en banco inclinado con barra
+dumbbell-incline-shoulder-raise | Elevación escapular en banco inclinado con mancuernas
+incline-scapula-push-up | Flexión escapular inclinada
+scapula-push-up | Flexión escapular
+smith-incline-shoulder-raises | Elevación escapular en banco inclinado en Smith
+# Lumbares
+back-extension-on-exercise-ball | Extensión lumbar en fitball
+band-straight-leg-deadlift | Peso muerto con piernas rectas con banda
+exercise-ball-back-extension-with-arms-extended | Extensión lumbar en fitball con brazos estirados
+exercise-ball-back-extension-with-hands-behind-head | Extensión lumbar en fitball con manos en la nuca
+exercise-ball-back-extension-with-knees-off-ground | Extensión lumbar en fitball con rodillas elevadas
+exercise-ball-back-extension-with-rotation | Extensión lumbar en fitball con giro
+exercise-ball-hug | Abrazo al fitball
+exercise-ball-prone-leg-raise | Elevación de piernas boca abajo en fitball
+hyperextension-on-bench | Hiperextensión en banco
+lever-back-extension | Extensión lumbar en máquina
+roller-back-stretch | Estiramiento de espalda con rodillo
+standing-pelvic-tilt | Basculación pélvica de pie
+two-toe-touch-male | Toque de pies con ambas manos
+weighted-hyperextension-on-stability-ball | Hiperextensión con peso en fitball
+# Femorales
+assisted-prone-hamstring | Estiramiento de femoral boca abajo con ayuda
+cable-assisted-inverse-leg-curl | Curl nórdico asistido con polea
+exercise-ball-seated-hamstring-stretch | Estiramiento de femoral sentado en fitball
+glute-ham-raise | Elevación glúteo-femoral
+inverse-leg-curl-bench-support | Curl nórdico con apoyo en banco
+inverse-leg-curl-on-pull-up-cable-machine | Curl nórdico en máquina de poleas
+kettlebell-hang-clean | Cargada colgante con kettlebell
+kick-out-sit | Patada desde sentado
+leg-up-hamstring-stretch | Estiramiento de femoral con la pierna arriba
+lever-kneeling-leg-curl | Curl femoral de rodillas en máquina
+lever-lying-two-one-leg-curl | Curl femoral acostado a dos y una pierna en máquina
+power-clean | Cargada de potencia (power clean)
+reclining-big-toe-pose-with-rope | Postura del dedo gordo reclinada con cuerda
+seated-wide-angle-pose-sequence | Secuencia de piernas abiertas sentado
+self-assisted-inverse-leg-curl-1766 | Curl nórdico autoasistido (variante)
+self-assisted-inverse-leg-curl | Curl nórdico autoasistido
+single-leg-platform-slide | Deslizamiento a una pierna en plataforma
+standing-hamstring-and-calf-stretch-with-strap | Estiramiento de femoral y gemelo de pie con correa
+standing-single-leg-curl | Curl femoral de pie a una pierna
+# Glúteos
+arms-apart-circular-toe-touch-male | Toque de pies en círculo con brazos abiertos
+assisted-lying-glutes-stretch | Estiramiento de glúteos acostado con ayuda
+assisted-lying-gluteus-and-piriformis-stretch | Estiramiento de glúteo y piriforme acostado con ayuda
+band-lying-hip-internal-rotation | Rotación interna de cadera acostado con banda
+band-seated-hip-internal-rotation | Rotación interna de cadera sentado con banda
+band-squat-row | Sentadilla con remo con banda
+band-straight-back-stiff-leg-deadlift | Peso muerto piernas rígidas con espalda recta con banda
+barbell-clean-grip-front-squat | Sentadilla frontal con barra, agarre de cargada
+barbell-front-chest-squat | Sentadilla frontal con barra al pecho
+barbell-full-squat-back-pov | Sentadilla con barra (vista posterior)
+barbell-full-squat-side-pov | Sentadilla con barra (vista lateral)
+barbell-full-zercher-squat | Sentadilla Zercher profunda con barra
+barbell-hack-squat | Sentadilla hack con barra
+barbell-high-bar-squat | Sentadilla con barra alta
+barbell-jefferson-squat | Sentadilla Jefferson con barra
+barbell-jump-squat | Sentadilla con salto con barra
+barbell-lateral-lunge | Zancada lateral con barra
+barbell-low-bar-squat | Sentadilla con barra baja
+barbell-lying-lifting-on-hip | Elevación de cadera acostado con barra
+barbell-narrow-stance-squat | Sentadilla con barra y pies juntos
+barbell-one-arm-side-deadlift | Peso muerto lateral a una mano con barra
+barbell-rack-pull | Peso muerto desde soportes (rack pull)
+barbell-rear-lunge-v-2 | Zancada atrás con barra (variante)
+barbell-rear-lunge | Zancada atrás con barra
+barbell-seated-good-morning | Buenos días sentado con barra
+barbell-single-leg-deadlift | Peso muerto a una pierna con barra
+barbell-speed-squat | Sentadilla rápida con barra
+barbell-stiff-leg-good-morning | Buenos días con piernas rígidas con barra
+barbell-zercher-squat | Sentadilla Zercher con barra
+basic-toe-touch-male | Toque de pies básico
+bench-hip-extension | Extensión de cadera en banco
+bent-knee-lying-twist-male | Giro de cadera acostado con rodillas flexionadas
+bodyweight-drop-jump-squat | Sentadilla con salto desde caída
+cable-deadlift | Peso muerto en polea
+dumbbell-bench-squat | Sentadilla al banco con mancuernas
+dumbbell-clean | Cargada con mancuernas
+dumbbell-contralateral-forward-lunge | Zancada al frente con mancuerna en la mano contraria
+dumbbell-deadlift | Peso muerto con mancuernas
+dumbbell-one-arm-snatch | Arrancada a una mano con mancuerna
+dumbbell-plyo-squat | Sentadilla pliométrica con mancuernas
+dumbbell-single-leg-deadlift-with-stepbox-support | Peso muerto a una pierna con mancuerna y apoyo en cajón
+dumbbell-single-leg-squat | Sentadilla a una pierna con mancuerna
+dumbbell-straight-leg-deadlift | Peso muerto con piernas rectas con mancuernas
+dumbbell-sumo-pull-through | Pull-through sumo con mancuerna
+exercise-ball-hip-flexor-stretch | Estiramiento de flexor de cadera con fitball
+exercise-ball-one-leg-prone-lower-body-rotation | Rotación de cadera boca abajo a una pierna en fitball
+exercise-ball-one-legged-diagonal-kick-hamstring-curl | Patada diagonal y curl femoral a una pierna en fitball
+flutter-kicks | Tijeras
+frankenstein-squat | Sentadilla Frankenstein
+hands-clasped-circular-toe-touch-male | Toque de pies en círculo con manos entrelazadas
+hands-reversed-clasped-circular-toe-touch-male | Toque de pies en círculo con manos entrelazadas hacia afuera
+hug-keens-to-chest | Abrazar las rodillas al pecho
+iron-cross-stretch | Estiramiento cruz de hierro
+jump-squat-v-2 | Sentadilla con salto (variante)
+kettlebell-front-squat | Sentadilla frontal con kettlebell
+kettlebell-lunge-pass-through | Zancada pasando la kettlebell bajo la pierna
+kettlebell-pistol-squat | Sentadilla pistola con kettlebell
+kettlebell-turkish-get-up-squat-style | Levantamiento turco con kettlebell (estilo sentadilla)
+kneeling-jump-squat | Salto desde rodillas a sentadilla
+lever-deadlift | Peso muerto en máquina
+lever-horizontal-one-leg-press | Prensa horizontal a una pierna en máquina
+lever-reverse-hyperextension | Hiperextensión inversa en máquina
+lever-seated-good-morning | Buenos días sentado en máquina
+one-leg-squat | Sentadilla a una pierna
+outside-leg-kick-push-up | Flexión con patada lateral hacia afuera
+pelvic-tilt-into-bridge | Basculación pélvica a puente
+pike-to-cobra-push-up | Flexión de pica a cobra
+potty-squat-with-support | Sentadilla profunda con apoyo
+push-up-inside-leg-kick | Flexión con patada hacia adentro
+rear-decline-bridge | Puente con pies elevados
+reverse-hyper-extension-on-stability-ball | Hiperextensión inversa en fitball
+reverse-hyper-on-flat-bench | Hiperextensión inversa en banco plano
+rocking-frog-stretch | Estiramiento de rana con balanceo
+roller-hip-lat-stretch | Estiramiento de cadera y dorsal con rodillo
+roller-hip-stretch | Estiramiento de cadera con rodillo
+single-leg-squat-pistol-male | Sentadilla pistola
+sled-45-degrees-one-leg-press | Prensa 45° a una pierna
+sled-45-leg-press-back-pov | Prensa de piernas (vista posterior)
+sled-45-leg-press-side-pov | Prensa de piernas (vista lateral)
+sled-45-leg-wide-press | Prensa de piernas con pies abiertos
+sled-closer-hack-squat | Sentadilla hack con pies juntos
+sled-lying-squat | Sentadilla acostado en máquina
+smith-bent-knee-good-morning | Buenos días con rodillas flexionadas en Smith
+smith-deadlift | Peso muerto en Smith
+smith-front-squat-clean-grip | Sentadilla frontal en Smith, agarre de cargada
+smith-full-squat | Sentadilla profunda en Smith
+smith-hack-squat | Sentadilla hack en Smith
+smith-leg-press | Prensa de piernas en Smith
+smith-low-bar-squat | Sentadilla con barra baja en Smith
+smith-sprint-lunge | Zancada de velocista en Smith
+spider-crawl-push-up | Flexión araña
+tire-flip | Volteo de neumático
+trap-bar-deadlift | Peso muerto con barra hexagonal
+twist-hip-lift | Elevación de cadera con giro
+weighted-cossack-squats-male | Sentadilla cosaca con peso
+weighted-lunge-with-swing | Zancada con balanceo de peso
+weighted-stretch-lunge | Zancada profunda con peso
+# Cuádriceps
+all-fours-squad-stretch | Estiramiento de cuádriceps en cuadrupedia
+assisted-prone-lying-quads-stretch | Estiramiento de cuádriceps boca abajo con ayuda
+backward-jump | Salto hacia atrás
+balance-board | Equilibrio en tabla
+band-one-arm-single-leg-split-squat | Zancada estática a una mano con banda
+barbell-bench-front-squat | Sentadilla frontal al banco con barra
+barbell-bench-squat | Sentadilla al banco con barra
+barbell-clean-and-press | Cargada y press con barra
+barbell-one-leg-squat | Sentadilla a una pierna con barra
+barbell-overhead-squat | Sentadilla con barra por encima de la cabeza
+barbell-side-split-squat-v-2 | Zancada lateral estática con barra (variante)
+barbell-side-split-squat | Zancada lateral estática con barra
+barbell-single-leg-split-squat | Sentadilla búlgara con barra
+barbell-split-squat-v-2 | Zancada estática con barra
+barbell-squat-jump-step-rear-lunge | Sentadilla con salto y zancada atrás con barra
+barbell-squat-on-knees | Sentadilla de rodillas con barra
+barbell-wide-squat | Sentadilla con barra y pies abiertos
+chair-leg-extended-stretch | Estiramiento de pierna extendida en silla
+dumbbell-step-up-lunge | Subida al escalón con zancada y mancuernas
+dumbbell-step-up-split-squat | Zancada estática con pie elevado y mancuernas
+dumbbell-supported-squat | Sentadilla con apoyo y mancuerna
+farmers-walk | Paseo del granjero
+forward-jump | Salto hacia adelante
+lever-alternate-leg-press | Prensa de piernas alterna en máquina
+quick-feet-v-2 | Pies rápidos
+smith-chair-squat | Sentadilla tipo silla en Smith
+smith-single-leg-split-squat | Sentadilla búlgara en Smith
+snatch-pull | Tirón de arrancada
+squat-jerk | Sentadilla con envión (squat jerk)
+squat-on-bosu-ball | Sentadilla sobre bosu
+squat-to-overhead-reach-with-twist | Sentadilla con brazos arriba y giro
+suspended-split-squat | Zancada estática en suspensión (TRX)
+weighted-sissy-squat | Sentadilla sissy con peso
+# Bíceps
+band-concentration-curl | Curl concentrado con banda
+band-one-arm-overhead-biceps-curl | Curl de bíceps por encima de la cabeza a una mano con banda
+barbell-alternate-biceps-curl | Curl de bíceps alterno con barra
+barbell-biceps-curl-with-arm-blaster | Curl de bíceps con barra y aislador
+barbell-drag-curl | Curl arrastre con barra
+barbell-lying-preacher-curl | Curl predicador acostado con barra
+barbell-preacher-curl | Curl predicador con barra
+barbell-prone-incline-curl | Curl boca abajo en banco inclinado con barra
+barbell-reverse-curl | Curl inverso con barra
+barbell-reverse-preacher-curl | Curl predicador inverso con barra
+barbell-seated-close-grip-concentration-curl | Curl concentrado sentado con barra, agarre cerrado
+barbell-standing-close-grip-curl | Curl de pie con barra, agarre cerrado
+barbell-standing-concentration-curl | Curl concentrado de pie con barra
+barbell-standing-reverse-grip-curl | Curl de pie con barra, agarre prono
+barbell-standing-wide-grip-biceps-curl | Curl de bíceps de pie con barra, agarre abierto
+barbell-standing-wide-grip-curl | Curl de pie con barra, agarre abierto (variante)
+biceps-leg-concentration-curl | Curl concentrado con la pierna
+biceps-narrow-pull-ups | Dominada estrecha para bíceps
+biceps-pull-up | Dominada para bíceps
+bodyweight-side-lying-biceps-curl | Curl de bíceps de lado con peso corporal
+cable-close-grip-curl | Curl en polea, agarre cerrado
+cable-concentration-curl | Curl concentrado en polea
+cable-drag-curl | Curl arrastre en polea
+cable-lying-bicep-curl | Curl de bíceps acostado en polea
+cable-lying-close-grip-curl | Curl acostado en polea, agarre cerrado
+cable-one-arm-curl | Curl a una mano en polea
+cable-one-arm-preacher-curl | Curl predicador a una mano en polea
+cable-one-arm-reverse-preacher-curl | Curl predicador inverso a una mano en polea
+cable-overhead-curl-on-exercise-ball | Curl alto en polea sentado en fitball
+cable-overhead-curl | Curl alto en polea
+cable-preacher-curl | Curl predicador en polea
+cable-pulldown-bicep-curl | Curl de bíceps en polea alta
+cable-reverse-curl | Curl inverso en polea
+cable-reverse-one-arm-curl | Curl inverso a una mano en polea
+cable-reverse-preacher-curl | Curl predicador inverso en polea
+cable-rope-hammer-preacher-curl | Curl predicador martillo en polea con cuerda
+cable-rope-one-arm-hammer-preacher-curl | Curl predicador martillo a una mano en polea con cuerda
+cable-seated-curl | Curl sentado en polea
+cable-seated-one-arm-concentration-curl | Curl concentrado sentado a una mano en polea
+cable-seated-overhead-curl | Curl alto sentado en polea
+cable-squatting-curl | Curl en sentadilla en polea
+cable-standing-inner-curl | Curl interno de pie en polea
+cable-standing-pulldown-with-rope | Jalón de pie en polea con cuerda
+cable-two-arm-curl-on-incline-bench | Curl a dos manos en banco inclinado en polea
+dumbbell-alternate-biceps-curl-with-arm-blaster | Curl alterno con mancuernas y aislador
+dumbbell-alternate-hammer-preacher-curl | Curl predicador martillo alterno con mancuernas
+dumbbell-alternate-preacher-curl | Curl predicador alterno con mancuernas
+dumbbell-alternate-seated-hammer-curl | Curl martillo alterno sentado
+dumbbell-alternating-bicep-curl-with-leg-raised-on-exercise-ball | Curl alterno en fitball con una pierna elevada
+dumbbell-alternating-seated-bicep-curl-on-exercise-ball | Curl alterno sentado en fitball
+dumbbell-bicep-curl-lunge-with-bowling-motion | Zancada con curl de bíceps y movimiento de bolos
+dumbbell-bicep-curl-on-exercise-ball-with-leg-raised | Curl de bíceps en fitball con una pierna elevada
+dumbbell-bicep-curl-with-stork-stance | Curl de bíceps sobre una pierna
+dumbbell-biceps-curl-reverse | Curl inverso con mancuernas
+dumbbell-biceps-curl-squat | Sentadilla con curl de bíceps
+dumbbell-biceps-curl-v-sit-on-bosu-ball | Curl de bíceps en V sobre bosu
+dumbbell-biceps-curl-with-arm-blaster | Curl de bíceps con mancuernas y aislador
+dumbbell-cross-body-hammer-curl-v-2 | Curl martillo cruzado (variante)
+dumbbell-cross-body-hammer-curl | Curl martillo cruzado
+dumbbell-hammer-curl-on-exercise-ball | Curl martillo en fitball
+dumbbell-hammer-curl-v-2 | Curl martillo (variante)
+dumbbell-hammer-curls-with-arm-blaster | Curl martillo con aislador
+dumbbell-high-curl | Curl alto con mancuernas
+dumbbell-incline-biceps-curl | Curl de bíceps en banco inclinado con mancuernas
+dumbbell-incline-curl-v-2 | Curl en banco inclinado (variante)
+dumbbell-incline-hammer-curl | Curl martillo en banco inclinado
+dumbbell-incline-inner-biceps-curl | Curl interno en banco inclinado
+dumbbell-kneeling-bicep-curl-exercise-ball | Curl de bíceps de rodillas en fitball
+dumbbell-lunge-with-bicep-curl | Zancada con curl de bíceps
+dumbbell-lying-supine-biceps-curl | Curl de bíceps acostado boca arriba
+dumbbell-lying-supine-curl | Curl acostado boca arriba (variante)
+dumbbell-lying-wide-curl | Curl acostado con brazos abiertos
+dumbbell-one-arm-concentration-curl-on-stability-ball | Curl concentrado a una mano en fitball
+dumbbell-one-arm-hammer-preacher-curl | Curl predicador martillo a una mano
+dumbbell-one-arm-prone-curl | Curl a una mano boca abajo
+dumbbell-one-arm-prone-hammer-curl | Curl martillo a una mano boca abajo
+dumbbell-one-arm-reverse-preacher-curl | Curl predicador inverso a una mano
+dumbbell-one-arm-reverse-spider-curl | Curl araña inverso a una mano
+dumbbell-one-arm-seated-bicep-curl-on-exercise-ball | Curl de bíceps a una mano sentado en fitball
+dumbbell-one-arm-seated-hammer-curl | Curl martillo a una mano sentado
+dumbbell-one-arm-standing-curl | Curl a una mano de pie
+dumbbell-one-arm-standing-hammer-curl | Curl martillo a una mano de pie
+dumbbell-one-arm-zottman-preacher-curl | Curl Zottman predicador a una mano
+dumbbell-over-bench-neutral-wrist-curl | Curl de muñeca neutro sobre banco
+dumbbell-over-bench-one-arm-neutral-wrist-curl | Curl de muñeca neutro a una mano sobre banco
+dumbbell-peacher-hammer-curl | Curl predicador martillo con mancuerna
+dumbbell-preacher-curl-over-exercise-ball | Curl predicador sobre fitball
+dumbbell-preacher-curl | Curl predicador con mancuerna
+dumbbell-prone-incline-curl | Curl boca abajo en banco inclinado
+dumbbell-prone-incline-hammer-curl | Curl martillo boca abajo en banco inclinado
+dumbbell-revers-grip-biceps-curl | Curl de bíceps con agarre prono
+dumbbell-reverse-preacher-curl | Curl predicador inverso con mancuerna
+dumbbell-reverse-spider-curl | Curl araña inverso
+dumbbell-seated-alternate-hammer-curl-on-exercise-ball | Curl martillo alterno sentado en fitball
+dumbbell-seated-bicep-curl | Curl de bíceps sentado con mancuernas
+dumbbell-seated-biceps-curl-on-stability-ball | Curl de bíceps sentado en fitball
+dumbbell-seated-biceps-curl-to-shoulder-press | Curl de bíceps y press de hombros sentado
+dumbbell-seated-curl | Curl sentado con mancuernas (variante)
+dumbbell-seated-hammer-curl | Curl martillo sentado
+dumbbell-seated-inner-biceps-curl | Curl interno sentado
+dumbbell-seated-neutral-wrist-curl | Curl de muñeca neutro sentado
+dumbbell-seated-one-arm-bicep-curl-on-exercise-ball-with-leg-raised | Curl a una mano en fitball con una pierna elevada
+dumbbell-seated-preacher-curl | Curl predicador sentado con mancuerna
+dumbbell-seated-revers-grip-concentration-curl | Curl concentrado sentado con agarre prono
+dumbbell-standing-alternate-hammer-curl-and-press | Curl martillo alterno y press de pie
+dumbbell-standing-biceps-curl | Curl de bíceps de pie con mancuernas
+dumbbell-standing-concentration-curl | Curl concentrado de pie
+dumbbell-standing-inner-biceps-curl-v-2 | Curl interno de pie
+dumbbell-standing-one-arm-concentration-curl | Curl concentrado a una mano de pie
+dumbbell-standing-one-arm-curl-over-incline-bench-1680 | Curl a una mano sobre banco inclinado (variante)
+dumbbell-standing-one-arm-curl-over-incline-bench | Curl a una mano sobre banco inclinado
+dumbbell-standing-one-arm-reverse-curl | Curl inverso a una mano de pie
+dumbbell-standing-preacher-curl | Curl predicador de pie con mancuerna
+dumbbell-standing-reverse-curl | Curl inverso de pie con mancuernas
+dumbbell-standing-zottman-preacher-curl | Curl Zottman predicador de pie
+dumbbell-step-up-single-leg-balance-with-bicep-curl | Subida al escalón con equilibrio y curl de bíceps
+dumbbell-waiter-biceps-curl | Curl mesero con mancuerna
+dumbbell-zottman-curl | Curl Zottman
+dumbbell-zottman-preacher-curl | Curl Zottman predicador
+ez-bar-biceps-curl-with-arm-blaster | Curl de bíceps con barra Z y aislador
+ez-bar-seated-close-grip-concentration-curl | Curl concentrado sentado con barra Z, agarre cerrado
+ez-barbell-close-grip-curl | Curl con barra Z, agarre cerrado
+ez-barbell-close-grip-preacher-curl | Curl predicador con barra Z, agarre cerrado
+ez-barbell-reverse-grip-curl | Curl inverso con barra Z
+ez-barbell-reverse-grip-preacher-curl | Curl predicador inverso con barra Z
+ez-barbell-seated-curls | Curl sentado con barra Z
+ez-barbell-spider-curl-1628 | Curl araña con barra Z (variante)
+ez-barbell-spider-curl | Curl araña con barra Z
+ez-barbell-standing-wide-grip-biceps-curl | Curl de bíceps de pie con barra Z, agarre abierto
+kettlebell-bottoms-up-clean-from-the-hang-position | Cargada colgante con kettlebell invertida
+kettlebell-double-alternating-hang-clean | Cargada colgante alterna con dos kettlebells
+lever-bicep-curl | Curl de bíceps en máquina
+lever-hammer-grip-preacher-curl | Curl predicador martillo en máquina
+lever-preacher-curl-v-2 | Curl predicador en máquina (variante)
+lever-reverse-grip-preacher-curl | Curl predicador inverso en máquina
+olympic-barbell-hammer-curl | Curl martillo con barra olímpica
+resistance-band-seated-biceps-curl | Curl de bíceps sentado con banda
+smith-machine-bicep-curl | Curl de bíceps en Smith
+weighted-seated-bicep-curl-on-stability-ball | Curl de bíceps con peso sentado en fitball
+weighted-standing-curl | Curl de pie con disco
+# Tríceps
+assisted-standing-triceps-extension-with-towel | Extensión de tríceps de pie con toalla asistida
+assisted-triceps-dip-kneeling | Fondos de tríceps de rodillas en máquina asistida
+band-close-grip-push-up | Flexión con agarre cerrado y banda
+barbell-decline-close-grip-to-skull-press | Press cerrado a rompecráneos en banco declinado con barra
+barbell-incline-close-grip-bench-press | Press inclinado con barra, agarre cerrado
+barbell-incline-reverse-grip-press | Press inclinado con barra, agarre supino
+barbell-jm-bench-press | Press JM con barra
+barbell-lying-back-of-the-head-tricep-extension | Extensión de tríceps acostado tras la cabeza con barra
+barbell-lying-close-grip-press | Press acostado con barra, agarre cerrado
+barbell-lying-close-grip-triceps-extension | Extensión de tríceps acostado con barra, agarre cerrado
+barbell-lying-extension | Extensión de tríceps acostado con barra (variante)
+barbell-lying-triceps-extension-skull-crusher | Rompecráneos con barra
+barbell-lying-triceps-extension | Extensión de tríceps acostado con barra
+barbell-one-arm-floor-press | Press en el suelo a una mano con barra
+barbell-pin-presses | Press desde pines con barra
+barbell-reverse-close-grip-bench-press | Press de banca cerrado con agarre supino
+barbell-reverse-grip-skullcrusher | Rompecráneos con barra, agarre supino
+barbell-seated-close-grip-behind-neck-triceps-extension | Extensión de tríceps tras la nuca sentado con barra
+barbell-seated-overhead-triceps-extension | Extensión de tríceps sobre la cabeza sentado con barra
+barbell-standing-overhead-triceps-extension | Extensión de tríceps sobre la cabeza de pie con barra
+bench-dip-on-floor | Fondos de tríceps en banco con pies en el suelo
+body-up | Body up (de antebrazos a manos)
+bodyweight-kneeling-triceps-extension | Extensión de tríceps de rodillas con peso corporal
+cable-alternate-triceps-extension | Extensión de tríceps alterna en polea
+cable-concentration-extension-on-knee | Extensión concentrada de tríceps sobre la rodilla en polea
+cable-high-pulley-overhead-tricep-extension | Extensión de tríceps sobre la cabeza en polea alta
+cable-incline-triceps-extension | Extensión de tríceps en banco inclinado en polea
+cable-kickback | Patada de tríceps en polea
+cable-kneeling-triceps-extension | Extensión de tríceps de rodillas en polea
+cable-lying-triceps-extension-v-2 | Extensión de tríceps acostado en polea
+cable-one-arm-tricep-pushdown | Jalón de tríceps a una mano en polea
+cable-overhead-triceps-extension-rope-attachment | Extensión de tríceps sobre la cabeza en polea con cuerda
+cable-rear-drive | Empuje trasero de tríceps en polea
+cable-reverse-grip-pushdown | Jalón de tríceps con agarre supino
+cable-reverse-grip-triceps-pushdown-sz-bar-with-arm-blaster | Jalón de tríceps supino con barra Z y aislador
+cable-rope-high-pulley-overhead-tricep-extension | Extensión de tríceps sobre la cabeza en polea alta con cuerda
+cable-rope-incline-tricep-extension | Extensión de tríceps en banco inclinado en polea con cuerda
+cable-rope-lying-on-floor-tricep-extension | Extensión de tríceps acostado en el suelo en polea con cuerda
+cable-standing-one-arm-triceps-extension | Extensión de tríceps a una mano de pie en polea
+cable-standing-reverse-grip-one-arm-overhead-tricep-extension | Extensión de tríceps sobre la cabeza a una mano en polea, agarre supino
+cable-triceps-pushdown-v-bar-with-arm-blaster | Jalón de tríceps con barra en V y aislador
+cable-triceps-pushdown-v-bar | Jalón de tríceps con barra en V
+cable-two-arm-tricep-kickback | Patada de tríceps a dos manos en polea
+close-grip-push-up-on-knees | Flexión de rodillas con agarre cerrado
+dumbbell-close-grip-press-1731 | Press cerrado con mancuernas (variante)
+dumbbell-close-grip-press | Press cerrado con mancuernas
+dumbbell-decline-one-arm-hammer-press | Press martillo declinado a una mano
+dumbbell-decline-triceps-extension | Extensión de tríceps en banco declinado con mancuernas
+dumbbell-forward-lunge-triceps-extension | Zancada al frente con extensión de tríceps
+dumbbell-incline-hammer-press-on-exercise-ball | Press martillo inclinado en fitball
+dumbbell-incline-one-arm-hammer-press-on-exercise-ball | Press martillo inclinado a una mano en fitball
+dumbbell-incline-one-arm-hammer-press | Press martillo inclinado a una mano
+dumbbell-incline-triceps-extension | Extensión de tríceps en banco inclinado con mancuernas
+dumbbell-incline-two-arm-extension | Extensión de tríceps a dos manos en banco inclinado
+dumbbell-kickbacks-on-exercise-ball | Patada de tríceps en fitball
+dumbbell-lying-alternate-extension | Extensión de tríceps alterna acostado
+dumbbell-lying-elbow-press | Press de codo acostado con mancuernas
+dumbbell-lying-extension-across-face | Extensión de tríceps cruzada acostado
+dumbbell-lying-one-arm-pronated-triceps-extension | Extensión de tríceps a una mano acostado, agarre prono
+dumbbell-lying-one-arm-supinated-triceps-extension | Extensión de tríceps a una mano acostado, agarre supino
+dumbbell-lying-single-extension | Extensión de tríceps a una mano acostado
+dumbbell-neutral-grip-bench-press | Press de banca con mancuernas, agarre neutro
+dumbbell-one-arm-french-press-on-exercise-ball | Press francés a una mano en fitball
+dumbbell-one-arm-hammer-press-on-exercise-ball | Press martillo a una mano en fitball
+dumbbell-one-arm-kickback | Patada de tríceps a una mano
+dumbbell-one-arm-triceps-extension-on-bench | Extensión de tríceps a una mano en banco
+dumbbell-palms-in-incline-bench-press | Press inclinado con mancuernas, palmas enfrentadas
+dumbbell-pronate-grip-triceps-extension | Extensión de tríceps con agarre prono
+dumbbell-seated-bench-extension | Extensión de tríceps sentado en banco
+dumbbell-seated-bent-over-alternate-kickback | Patada de tríceps alterna sentado inclinado
+dumbbell-seated-bent-over-triceps-extension | Extensión de tríceps sentado inclinado
+dumbbell-seated-kickback | Patada de tríceps sentado
+dumbbell-seated-one-arm-kickback | Patada de tríceps a una mano sentado
+dumbbell-seated-reverse-grip-one-arm-overhead-tricep-extension | Extensión de tríceps sobre la cabeza a una mano sentado, agarre supino
+dumbbell-seated-triceps-extension | Extensión de tríceps sentado con mancuerna
+dumbbell-standing-alternating-tricep-kickback | Patada de tríceps alterna de pie
+dumbbell-standing-bent-over-one-arm-triceps-extension | Extensión de tríceps a una mano inclinado de pie
+dumbbell-standing-bent-over-two-arm-triceps-extension | Extensión de tríceps a dos manos inclinado de pie
+dumbbell-standing-kickback | Patada de tríceps de pie
+dumbbell-standing-one-arm-extension | Extensión de tríceps a una mano de pie
+dumbbell-tate-press | Press Tate con mancuernas
+dumbbell-tricep-kickback-with-stork-stance | Patada de tríceps sobre una pierna
+dumbbell-twisting-bench-press | Press de banca con giro con mancuernas
+dumbbells-seated-triceps-extension | Extensión de tríceps sentado con dos mancuernas
+elbow-dips | Fondos sobre los codos
+exercise-ball-dip | Fondos de tríceps en fitball
+exercise-ball-seated-triceps-stretch | Estiramiento de tríceps sentado en fitball
+exercise-ball-supine-triceps-extension | Extensión de tríceps boca arriba en fitball
+ez-bar-close-grip-bench-press | Press de banca cerrado con barra Z
+ez-bar-french-press-on-exercise-ball | Press francés con barra Z en fitball
+ez-bar-lying-close-grip-triceps-extension-behind-head | Extensión de tríceps tras la cabeza acostado con barra Z
+ez-bar-standing-french-press | Press francés de pie con barra Z
+ez-barbell-decline-close-grip-face-press | Press cerrado a la cara en banco declinado con barra Z
+ez-barbell-decline-triceps-extension | Extensión de tríceps en banco declinado con barra Z
+ez-barbell-incline-triceps-extension | Extensión de tríceps en banco inclinado con barra Z
+ez-barbell-jm-bench-press | Press JM con barra Z
+ez-barbell-seated-triceps-extension | Extensión de tríceps sentado con barra Z
+handstand-push-up | Flexión en parada de manos
+handstand | Parada de manos
+impossible-dips | Fondos imposibles
+incline-close-grip-push-up | Flexión inclinada con agarre cerrado
+lever-overhand-triceps-dip | Fondos de tríceps en máquina, agarre prono
+lever-seated-dip | Fondos sentado en máquina
+lever-triceps-extension | Extensión de tríceps en máquina
+medicine-ball-close-grip-push-up | Flexión cerrada sobre balón medicinal
+medicine-ball-supine-chest-throw | Lanzamiento de balón medicinal desde el pecho acostado
+narrow-push-up-on-exercise-ball | Flexión cerrada sobre fitball
+olympic-barbell-triceps-extension | Extensión de tríceps con barra olímpica
+one-arm-dip | Fondo a un brazo
+push-up-close-grip-off-dumbbell | Flexión cerrada sobre mancuerna
+push-up-on-lower-arms | Flexión sobre antebrazos
+reverse-dip | Fondo invertido
+ring-dips | Fondos en anillas
+side-push-up | Flexión lateral
+ski-ergometer | Ergómetro de esquí
+smith-close-grip-bench-press | Press de banca cerrado en Smith
+smith-machine-decline-close-grip-bench-press | Press de banca cerrado declinado en Smith
+smith-machine-incline-tricep-extension | Extensión de tríceps en banco inclinado en Smith
+stalder-press | Press Stalder
+three-bench-dip | Fondos entre tres bancos
+triceps-dip-bench-leg | Fondos de tríceps con pies en banco
+triceps-dip-between-benches | Fondos de tríceps entre bancos
+triceps-dip | Fondos de tríceps
+triceps-press | Press de tríceps con peso corporal
+triceps-stretch | Estiramiento de tríceps (variante)
+weighted-bench-dip | Fondos en banco con peso
+weighted-three-bench-dips | Fondos entre tres bancos con peso
+weighted-tricep-dips | Fondos de tríceps con lastre
+weighted-triceps-dip-on-high-parallel-bars | Fondos de tríceps con lastre en paralelas altas
+# Hombros
+band-front-lateral-raise | Elevación frontal y lateral con banda
+band-twisting-overhead-press | Press por encima de la cabeza con giro y banda
+band-y-raise | Elevación en Y con banda
+barbell-front-raise | Elevación frontal con barra
+barbell-one-arm-snatch | Arrancada a una mano con barra
+barbell-rear-delt-raise | Elevación posterior con barra
+barbell-rear-delt-row | Remo para deltoide posterior con barra
+barbell-seated-behind-head-military-press | Press militar tras la nuca sentado con barra
+barbell-seated-bradford-rocky-press | Press Bradford sentado con barra
+barbell-skier | Esquiador con barra
+barbell-standing-bradford-press | Press Bradford de pie con barra
+barbell-standing-close-grip-military-press | Press militar de pie con barra, agarre cerrado
+barbell-standing-front-raise-over-head | Elevación frontal hasta arriba con barra
+barbell-standing-wide-military-press | Press militar de pie con barra, agarre abierto
+barbell-thruster | Thruster con barra
+barbell-upright-row-v-2 | Remo al mentón con barra (variante 2)
+barbell-upright-row-v-3 | Remo al mentón con barra (variante 3)
+barbell-upright-row | Remo al mentón con barra
+barbell-wide-grip-upright-row | Remo al mentón con barra, agarre abierto
+battling-ropes | Cuerdas de batalla
+cable-alternate-shoulder-press | Press de hombros alterno en polea
+cable-cross-over-revers-fly | Aperturas invertidas en polea cruzada
+cable-forward-raise | Elevación al frente en polea
+cable-front-raise | Elevación frontal en polea
+cable-front-shoulder-raise | Elevación frontal de hombro en polea
+cable-kneeling-rear-delt-row-with-rope-male | Remo para deltoide posterior de rodillas en polea con cuerda
+cable-one-arm-lateral-raise | Elevación lateral a una mano en polea
+cable-rear-delt-row-stirrups | Remo para deltoide posterior en polea con estribos
+cable-rear-delt-row-with-rope | Remo para deltoide posterior en polea con cuerda
+cable-seated-rear-lateral-raise | Elevación posterior sentado en polea
+cable-seated-shoulder-internal-rotation | Rotación interna de hombro sentado en polea
+cable-shoulder-press | Press de hombros en polea
+cable-standing-cross-over-high-reverse-fly | Aperturas invertidas altas de pie en polea cruzada
+cable-standing-rear-delt-row-with-rope | Remo para deltoide posterior de pie en polea con cuerda
+cable-standing-shoulder-external-rotation | Rotación externa de hombro de pie en polea
+cable-supine-reverse-fly | Aperturas invertidas boca arriba en polea
+cable-upright-row | Remo al mentón en polea
+dumbbell-alternate-side-press | Press lateral alterno con mancuernas
+dumbbell-arnold-press-v-2 | Press Arnold (variante)
+dumbbell-bench-seated-press | Press de hombros sentado en banco con mancuernas
+dumbbell-cuban-press-v-2 | Press cubano con mancuernas (variante)
+dumbbell-cuban-press | Press cubano con mancuernas
+dumbbell-front-raise-v-2 | Elevaciones frontales (variante)
+dumbbell-full-can-lateral-raise | Elevación lateral con pulgar arriba
+dumbbell-incline-one-arm-lateral-raise | Elevación lateral a una mano en banco inclinado
+dumbbell-incline-raise | Elevación en banco inclinado con mancuernas
+dumbbell-incline-rear-lateral-raise | Elevación posterior en banco inclinado
+dumbbell-incline-t-raise | Elevación en T en banco inclinado
+dumbbell-iron-cross | Cruz de hierro con mancuernas
+dumbbell-lateral-to-front-raise | Elevación lateral a frontal con mancuernas
+dumbbell-lying-external-shoulder-rotation | Rotación externa de hombro acostado
+dumbbell-lying-on-floor-rear-delt-raise | Elevación posterior acostado en el suelo
+dumbbell-lying-one-arm-deltoid-rear | Elevación posterior a una mano acostado de lado
+dumbbell-lying-one-arm-rear-lateral-raise | Elevación posterior a una mano acostado
+dumbbell-lying-rear-lateral-raise | Elevación posterior acostado boca abajo
+dumbbell-one-arm-lateral-raise-with-support | Elevación lateral a una mano con apoyo
+dumbbell-one-arm-lateral-raise | Elevación lateral a una mano
+dumbbell-one-arm-reverse-fly-with-support | Apertura invertida a una mano con apoyo
+dumbbell-one-arm-shoulder-press-v-2 | Press de hombro a una mano (variante)
+dumbbell-one-arm-shoulder-press | Press de hombro a una mano
+dumbbell-one-arm-upright-row | Remo al mentón a una mano
+dumbbell-push-press | Push press con mancuernas
+dumbbell-raise | Elevación lateral y frontal con mancuernas
+dumbbell-rear-delt-raise | Elevación para deltoide posterior con mancuernas
+dumbbell-rear-delt-row-shoulder | Remo para deltoide posterior con mancuernas
+dumbbell-rear-lateral-raise-support-head | Elevación posterior con apoyo de cabeza
+dumbbell-rear-lateral-raise | Elevación posterior con mancuernas
+dumbbell-reverse-fly | Aperturas invertidas con mancuernas
+dumbbell-rotation-reverse-fly | Aperturas invertidas con rotación
+dumbbell-scott-press | Press Scott con mancuernas
+dumbbell-seated-alternate-front-raise | Elevación frontal alterna sentado
+dumbbell-seated-alternate-press | Press de hombros alterno sentado
+dumbbell-seated-alternate-shoulder | Press de hombro alterno sentado (variante)
+dumbbell-seated-bent-arm-lateral-raise | Elevación lateral sentado con brazos flexionados
+dumbbell-seated-front-raise | Elevación frontal sentado
+dumbbell-seated-lateral-raise-v-2 | Elevación lateral sentado (variante)
+dumbbell-seated-lateral-raise | Elevación lateral sentado
+dumbbell-seated-shoulder-press-parallel-grip | Press de hombros sentado, agarre neutro
+dumbbell-side-lying-one-hand-raise | Elevación lateral a una mano acostado de lado
+dumbbell-single-arm-overhead-carry | Caminata con mancuerna arriba a una mano
+dumbbell-standing-alternate-overhead-press | Press de hombros alterno de pie
+dumbbell-standing-alternate-raise | Elevación frontal alterna de pie
+dumbbell-standing-around-world | Vuelta al mundo de pie con mancuernas
+dumbbell-standing-front-raise-above-head | Elevación frontal hasta arriba con mancuernas
+dumbbell-standing-one-arm-palm-in-press | Press de hombro a una mano de pie, palma hacia adentro
+dumbbell-standing-palms-in-press | Press de hombros de pie, palmas hacia adentro
+dumbbell-upright-row-back-pov | Remo al mentón con mancuernas (vista posterior)
+dumbbell-upright-row | Remo al mentón con mancuernas
+dumbbell-upright-shoulder-external-rotation | Rotación externa de hombro de pie con mancuerna
+dumbbell-w-press | Press en W con mancuernas
+ez-barbell-anti-gravity-press | Press antigravedad con barra Z
+kettlebell-alternating-press | Press alterno con kettlebells
+kettlebell-arnold-press | Press Arnold con kettlebell
+kettlebell-double-jerk | Envión doble con kettlebells
+kettlebell-double-push-press | Push press doble con kettlebells
+kettlebell-double-snatch | Arrancada doble con kettlebells
+kettlebell-one-arm-clean-and-jerk | Cargada y envión a una mano con kettlebell
+kettlebell-one-arm-jerk | Envión a una mano con kettlebell
+kettlebell-one-arm-military-press-to-the-side | Press militar lateral a una mano con kettlebell
+kettlebell-one-arm-push-press | Push press a una mano con kettlebell
+kettlebell-one-arm-snatch | Arrancada a una mano con kettlebell
+kettlebell-pirate-supper-legs | Barco pirata con kettlebell
+kettlebell-seated-press | Press sentado con kettlebell
+kettlebell-seated-two-arm-military-press | Press militar sentado con dos kettlebells
+kettlebell-seesaw-press | Press balancín con kettlebells
+kettlebell-thruster | Thruster con kettlebell
+kettlebell-two-arm-clean | Cargada con dos kettlebells
+kettlebell-two-arm-military-press | Press militar con dos kettlebells
+landmine-lateral-raise | Elevación lateral con barra anclada
+left-hook-boxing | Gancho izquierdo de boxeo
+lever-lateral-raise | Elevación lateral en máquina
+lever-military-press | Press militar en máquina
+lever-one-arm-shoulder-press | Press de hombro a una mano en máquina
+lever-seated-reverse-fly-parallel-grip | Aperturas posteriores en máquina, agarre neutro
+lever-shoulder-press-v-2 | Press de hombros en máquina (variante 2)
+lever-shoulder-press-v-3 | Press de hombros en máquina (variante 3)
+resistance-band-seated-shoulder-press | Press de hombros sentado con banda
+smith-behind-neck-press | Press tras la nuca en Smith
+smith-rear-delt-row | Remo para deltoide posterior en Smith
+smith-seated-shoulder-press | Press de hombros sentado en Smith
+smith-shoulder-press | Press de hombros en Smith
+smith-standing-behind-head-military-press | Press militar tras la nuca de pie en Smith
+smith-standing-military-press | Press militar de pie en Smith
+smith-upright-row | Remo al mentón en Smith
+standing-behind-neck-press | Press tras la nuca de pie
+weighted-front-raise | Elevación frontal con disco
+weighted-kneeling-step-with-swing | Paso de rodillas a pie con balanceo de peso
+weighted-round-arm | Círculos de brazos con disco
+# Trapecios
+band-shrug | Encogimientos con banda
+barbell-shrug | Encogimientos con barra
+cable-shrug | Encogimientos en polea
+dumbbell-decline-shrug-v-2 | Encogimientos en banco declinado (variante)
+dumbbell-decline-shrug | Encogimientos en banco declinado
+dumbbell-incline-shrug | Encogimientos en banco inclinado
+kettlebell-sumo-high-pull | Tirón alto sumo con kettlebell
+lever-gripless-shrug-v-2 | Encogimientos sin agarre en máquina (variante)
+lever-gripless-shrug | Encogimientos sin agarre en máquina
+lever-shrug | Encogimientos en máquina
+scapula-dips | Fondos escapulares
+scapular-pull-up | Dominada escapular
+smith-back-shrug | Encogimientos por detrás en Smith
+smith-shrug | Encogimientos en Smith
+# Dorsales
+alternate-lateral-pulldown | Jalón al pecho alterno
+archer-pull-up | Dominada arquero
+assisted-parallel-close-grip-pull-up | Dominada asistida con agarre neutro cerrado
+assisted-standing-chin-up | Dominada supina asistida desde el suelo
+assisted-standing-pull-up | Dominada asistida desde el suelo
+back-pec-stretch | Estiramiento de espalda y pecho
+band-fixed-back-close-grip-pulldown | Jalón con banda anclada, agarre cerrado
+band-fixed-back-underhand-pulldown | Jalón supino con banda anclada
+band-kneeling-one-arm-pulldown | Jalón a una mano de rodillas con banda
+band-underhand-pulldown | Jalón supino con banda
+barbell-bent-arm-pullover | Pullover con brazos flexionados con barra
+barbell-decline-bent-arm-pullover | Pullover declinado con brazos flexionados con barra
+barbell-decline-wide-grip-pullover | Pullover declinado con barra, agarre abierto
+barbell-pullover-to-press | Pullover y press con barra
+barbell-pullover | Pullover con barra
+bench-pull-ups | Dominadas en banco
+cable-bar-lateral-pulldown | Jalón al pecho con barra en polea
+cable-cross-over-lateral-pulldown | Jalón cruzado en polea
+cable-incline-pushdown | Pullover inclinado en polea
+cable-lat-pulldown-full-range-of-motion | Jalón al pecho en polea, recorrido completo
+cable-lateral-pulldown-with-rope-attachment | Jalón al pecho en polea con cuerda
+cable-lateral-pulldown-with-v-bar | Jalón al pecho en polea con barra en V
+cable-lying-extension-pullover-with-rope-attachment | Pullover acostado en polea con cuerda
+cable-one-arm-pulldown | Jalón a una mano en polea
+cable-pulldown-pro-lat-bar | Jalón al pecho en polea con barra ergonómica
+cable-pushdown-straight-arm-v-2 | Pullover de pie en polea (variante)
+cable-rear-pulldown | Jalón tras la nuca en polea
+cable-seated-high-row-v-bar | Remo alto sentado en polea con barra en V
+cable-squat-row-with-rope-attachment | Sentadilla con remo en polea con cuerda
+cable-straight-arm-pulldown-with-rope | Pullover de pie en polea con cuerda
+cable-thibaudeau-kayak-row | Remo kayak en polea (Thibaudeau)
+cable-twisting-pull | Tirón con giro en polea
+cable-underhand-pulldown | Jalón supino en polea
+cable-wide-grip-rear-pulldown-behind-neck | Jalón tras la nuca en polea, agarre abierto
+chin-up | Dominada supina
+close-grip-chin-up | Dominada supina con agarre cerrado
+exercise-ball-alternating-arm-ups | Elevación alterna de brazos en fitball
+exercise-ball-lat-stretch | Estiramiento de dorsal con fitball
+exercise-ball-lower-back-stretch-pyramid | Estiramiento lumbar en pirámide con fitball
+exercise-ball-lying-side-lat-stretch | Estiramiento de dorsal de lado sobre fitball
+ez-bar-lying-bent-arms-pullover | Pullover acostado con brazos flexionados con barra Z
+gironda-sternum-chin | Dominada al esternón (Gironda)
+kipping-muscle-up | Muscle-up con impulso (kipping)
+l-pull-up | Dominada en L
+lever-assisted-chin-up | Dominada supina asistida en máquina
+lever-one-arm-lateral-wide-pulldown | Jalón a una mano en máquina, agarre abierto
+lever-pullover | Pullover en máquina
+lever-reverse-grip-lateral-pulldown | Jalón supino en máquina
+medicine-ball-catch-and-overhead-throw | Atrapar y lanzar sobre la cabeza con balón medicinal
+mixed-grip-chin-up | Dominada con agarre mixto
+muscle-up-on-vertical-bar | Muscle-up en barra vertical
+muscle-up | Muscle-up
+one-arm-against-wall | Estiramiento a un brazo contra la pared
+one-arm-chin-up | Dominada supina a un brazo
+pull-up-neutral-grip | Dominada con agarre neutro
+rear-pull-up | Dominada tras la nuca
+reverse-grip-machine-lat-pulldown | Jalón supino en máquina (variante)
+reverse-grip-pull-up | Dominada con agarre supino
+rocky-pull-up-pulldown | Dominada y jalón Rocky
+roller-side-lat-stretch | Estiramiento lateral de dorsal con rodillo
+seated-lower-back-stretch | Estiramiento lumbar sentado
+shoulder-grip-pull-up | Dominada con agarre al ancho de hombros
+side-lying-floor-stretch | Estiramiento de lado en el suelo
+side-to-side-chin | Dominada de lado a lado
+twin-handle-parallel-grip-lat-pulldown | Jalón al pecho con doble maneral, agarre neutro
+weighted-close-grip-chin-up-on-dip-cage | Dominada supina cerrada con lastre en jaula de fondos
+weighted-muscle-up-on-bar | Muscle-up con lastre en barra
+weighted-muscle-up | Muscle-up con lastre
+weighted-one-hand-pull-up | Dominada a una mano con lastre
+weighted-pull-up | Dominada con lastre
+wide-grip-pull-up | Dominada con agarre abierto
+wide-grip-rear-pull-up | Dominada tras la nuca con agarre abierto
+# Espalda alta
+back-lever | Back lever
+band-one-arm-twisting-seated-row | Remo sentado con giro a una mano con banda
+barbell-incline-row | Remo en banco inclinado con barra
+barbell-one-arm-bent-over-row | Remo inclinado a una mano con barra
+barbell-pendlay-row | Remo Pendlay con barra
+barbell-reverse-grip-bent-over-row | Remo inclinado con barra, agarre supino
+barbell-reverse-grip-incline-bench-row | Remo en banco inclinado con barra, agarre supino
+bodyweight-squatting-row-with-towel | Remo en cuclillas con toalla
+bodyweight-squatting-row | Remo en cuclillas con peso corporal
+bodyweight-standing-close-grip-one-arm-row | Remo de pie a una mano con agarre cerrado
+bodyweight-standing-close-grip-row | Remo de pie con agarre cerrado
+bodyweight-standing-one-arm-row-with-towel | Remo de pie a una mano con toalla
+bodyweight-standing-one-arm-row | Remo de pie a una mano con peso corporal
+bodyweight-standing-row | Remo de pie con peso corporal
+cable-decline-seated-wide-grip-row | Remo sentado declinado en polea, agarre abierto
+cable-floor-seated-wide-grip-row | Remo sentado en el suelo en polea, agarre abierto
+cable-high-row-kneeling | Remo alto de rodillas en polea
+cable-incline-bench-row | Remo en banco inclinado en polea
+cable-low-seated-row | Remo bajo sentado en polea
+cable-one-arm-bent-over-row | Remo inclinado a una mano en polea
+cable-one-arm-straight-back-high-row-kneeling | Remo alto a una mano de rodillas en polea
+cable-palm-rotational-row | Remo con rotación de palma en polea
+cable-reverse-grip-straight-back-seated-high-row | Remo alto sentado en polea, agarre supino
+cable-rope-crossover-seated-row | Remo sentado cruzado en polea con cuerda
+cable-rope-elevated-seated-row | Remo sentado elevado en polea con cuerda
+cable-rope-extension-incline-bench-row | Remo en banco inclinado en polea con cuerda
+cable-rope-seated-row | Remo sentado en polea con cuerda
+cable-seated-one-arm-alternate-row | Remo sentado alterno a una mano en polea
+cable-seated-wide-grip-row | Remo sentado en polea, agarre abierto
+cable-standing-row-v-bar | Remo de pie en polea con barra en V
+cable-standing-twist-row-v-bar | Remo de pie con giro en polea con barra en V
+cable-straight-back-seated-row | Remo sentado con espalda recta en polea
+cable-upper-row | Remo alto en polea
+cambered-bar-lying-row | Remo acostado con barra curva
+chin-ups-narrow-parallel-grip | Dominada con agarre neutro cerrado
+dumbbell-incline-y-raise | Elevación en Y en banco inclinado
+dumbbell-lying-rear-delt-row | Remo para deltoide posterior acostado con mancuernas
+dumbbell-palm-rotational-bent-over-row | Remo inclinado con rotación de palma
+dumbbell-reverse-grip-incline-bench-one-arm-row | Remo a una mano en banco inclinado, agarre supino
+dumbbell-reverse-grip-incline-bench-two-arm-row | Remo a dos manos en banco inclinado, agarre supino
+dumbbell-reverse-grip-row-female | Remo con mancuernas, agarre supino
+dumbbell-side-plank-with-rear-fly | Plancha lateral con apertura posterior
+elbow-lift-reverse-push-up | Flexión invertida con elevación de codos
+elevator | Elevador en barra
+ez-bar-reverse-grip-bent-over-row | Remo inclinado con barra Z, agarre supino
+front-lever-reps | Repeticiones de front lever
+inverted-row-on-bench | Remo invertido en banco
+inverted-row-v-2 | Remo invertido (variante)
+inverted-row-with-straps | Remo invertido con correas
+kettlebell-alternating-renegade-row | Remo renegado alterno con kettlebells
+kettlebell-alternating-row | Remo alterno con kettlebells
+kettlebell-two-arm-row | Remo con dos kettlebells
+lever-alternating-narrow-grip-seated-row | Remo sentado alterno en máquina, agarre cerrado
+lever-bent-over-row-with-v-bar | Remo inclinado en máquina con barra en V
+lever-bent-over-row | Remo inclinado en máquina
+lever-high-row | Remo alto en máquina
+lever-narrow-grip-seated-row | Remo sentado en máquina, agarre cerrado
+lever-one-arm-bent-over-row | Remo inclinado a una mano en máquina
+lever-one-arm-lateral-high-row | Remo alto lateral a una mano en máquina
+lever-reverse-grip-vertical-row | Remo vertical en máquina, agarre supino
+lever-reverse-t-bar-row | Remo en T invertido en máquina
+lever-t-bar-reverse-grip-row | Remo en T en máquina, agarre supino
+lever-t-bar-row | Remo en T en máquina
+lever-unilateral-row | Remo unilateral en máquina
+medicine-ball-overhead-slam | Lanzamiento de balón medicinal al suelo
+one-arm-towel-row | Remo a una mano con toalla
+rope-climb | Subida por cuerda
+skin-the-cat | Skin the cat (rotación colgado)
+smith-bent-over-row | Remo inclinado en Smith
+smith-narrow-row | Remo en Smith, agarre cerrado
+smith-one-arm-row | Remo a una mano en Smith
+smith-reverse-grip-bent-over-row | Remo inclinado en Smith, agarre supino
+standing-archer | Arquero de pie
+suspended-row | Remo en suspensión (TRX)
+# Pecho
+archer-push-up | Flexión arquero
+assisted-chest-dip-kneeling | Fondos de pecho de rodillas en máquina asistida
+assisted-seated-pectoralis-major-stretch-with-stability-ball | Estiramiento de pectoral sentado con fitball y ayuda
+assisted-wide-grip-chest-dip-kneeling | Fondos de pecho abiertos de rodillas en máquina asistida
+band-one-arm-twisting-chest-press | Press de pecho con giro a una mano con banda
+barbell-decline-bench-press | Press de banca declinado con barra
+barbell-decline-pullover | Pullover declinado con barra
+barbell-decline-wide-grip-press | Press declinado con barra, agarre abierto
+barbell-front-raise-and-pullover | Elevación frontal y pullover con barra
+barbell-guillotine-bench-press | Press de banca guillotina con barra
+barbell-reverse-grip-decline-bench-press | Press de banca declinado con barra, agarre supino
+barbell-reverse-grip-incline-bench-press | Press de banca inclinado con barra, agarre supino
+barbell-wide-bench-press | Press de banca con barra, agarre abierto
+barbell-wide-reverse-grip-bench-press | Press de banca con barra, agarre supino abierto
+cable-bench-press | Press de banca en polea
+cable-cross-over-variation | Cruce de poleas (variante)
+cable-decline-fly | Aperturas declinadas en polea
+cable-decline-one-arm-press | Press declinado a una mano en polea
+cable-decline-press | Press declinado en polea
+cable-incline-bench-press | Press inclinado en polea
+cable-incline-fly-on-stability-ball | Aperturas inclinadas en polea sobre fitball
+cable-incline-fly | Aperturas inclinadas en polea
+cable-low-fly | Aperturas desde abajo en polea
+cable-lying-fly | Aperturas acostado en polea
+cable-middle-fly | Aperturas a media altura en polea
+cable-one-arm-decline-chest-fly | Apertura declinada a una mano en polea
+cable-one-arm-fly-on-exercise-ball | Apertura a una mano en polea sobre fitball
+cable-one-arm-incline-fly-on-exercise-ball | Apertura inclinada a una mano en polea sobre fitball
+cable-one-arm-incline-press-on-exercise-ball | Press inclinado a una mano en polea sobre fitball
+cable-one-arm-incline-press | Press inclinado a una mano en polea
+cable-one-arm-lateral-bent-over | Apertura inclinada lateral a una mano en polea
+cable-one-arm-press-on-exercise-ball | Press a una mano en polea sobre fitball
+cable-press-on-exercise-ball | Press en polea sobre fitball
+cable-seated-chest-press | Press de pecho sentado en polea
+cable-standing-up-straight-crossovers | Cruce de poleas de pie con espalda recta
+cable-upper-chest-crossovers | Cruce de poleas para pecho superior
+chest-and-front-of-shoulder-stretch | Estiramiento de pecho y hombro anterior
+chest-dip-on-dip-pull-up-cage | Fondos de pecho en jaula de dominadas
+chest-dip-on-straight-bar | Fondos de pecho en barra recta
+chest-stretch-with-exercise-ball | Estiramiento de pecho con fitball
+chest-tap-push-up-male | Flexión con toque de pecho
+clap-push-up | Flexión con palmada
+clock-push-up | Flexión reloj
+deep-push-up | Flexión profunda
+drop-push-up | Flexión con caída
+dumbbell-around-pullover | Pullover circular con mancuerna
+dumbbell-decline-bench-press | Press de banca declinado con mancuernas
+dumbbell-decline-fly | Aperturas declinadas con mancuernas
+dumbbell-decline-hammer-press | Press martillo declinado con mancuernas
+dumbbell-decline-one-arm-fly | Apertura declinada a una mano
+dumbbell-decline-twist-fly | Aperturas declinadas con giro
+dumbbell-fly-on-exercise-ball | Aperturas con mancuernas en fitball
+dumbbell-incline-alternate-press | Press inclinado alterno con mancuernas
+dumbbell-incline-breeding | Aperturas inclinadas con mancuernas (variante)
+dumbbell-incline-fly-on-exercise-ball | Aperturas inclinadas en fitball
+dumbbell-incline-fly | Aperturas inclinadas con mancuernas
+dumbbell-incline-hammer-press | Press martillo inclinado con mancuernas
+dumbbell-incline-one-arm-fly-on-exercise-ball | Apertura inclinada a una mano en fitball
+dumbbell-incline-one-arm-fly | Apertura inclinada a una mano
+dumbbell-incline-one-arm-press-on-exercise-ball | Press inclinado a una mano en fitball
+dumbbell-incline-one-arm-press | Press inclinado a una mano
+dumbbell-incline-palm-in-press | Press inclinado con mancuernas, palmas enfrentadas (variante)
+dumbbell-incline-press-on-exercise-ball | Press inclinado con mancuernas en fitball
+dumbbell-incline-twisted-flyes | Aperturas inclinadas con giro
+dumbbell-lying-hammer-press | Press martillo acostado con mancuernas
+dumbbell-lying-one-arm-press-v-2 | Press acostado a una mano (variante)
+dumbbell-lying-one-arm-press | Press acostado a una mano
+dumbbell-lying-pullover-on-exercise-ball | Pullover acostado en fitball
+dumbbell-one-arm-bench-fly | Apertura a una mano en banco
+dumbbell-one-arm-chest-fly-on-exercise-ball | Apertura de pecho a una mano en fitball
+dumbbell-one-arm-decline-chest-press | Press declinado a una mano
+dumbbell-one-arm-fly-on-exercise-ball | Apertura a una mano en fitball
+dumbbell-one-arm-incline-chest-press | Press de pecho inclinado a una mano
+dumbbell-one-arm-press-on-exercise-ball | Press a una mano en fitball
+dumbbell-one-arm-pullover-on-exercise-ball | Pullover a una mano en fitball
+dumbbell-one-arm-reverse-grip-press | Press a una mano con agarre supino
+dumbbell-one-leg-fly-on-exercise-ball | Aperturas en fitball sobre una pierna
+dumbbell-press-on-exercise-ball | Press de pecho con mancuernas en fitball
+dumbbell-pullover-hip-extension-on-exercise-ball | Pullover con extensión de cadera en fitball
+dumbbell-pullover-on-exercise-ball | Pullover con mancuerna en fitball
+dumbbell-reverse-bench-press | Press de banca con mancuernas, agarre supino
+dumbbell-straight-arm-pullover | Pullover con brazos rectos con mancuerna
+dynamic-chest-stretch-male | Estiramiento dinámico de pecho
+exercise-ball-pike-push-up | Flexión en pica sobre fitball
+floor-fly-with-barbell | Aperturas en el suelo con barra
+full-planche-push-up | Flexión en planche completa
+hands-bike | Bicicleta de brazos
+hyght-dumbbell-fly | Aperturas con mancuernas (variante)
+incline-push-up-depth-jump | Flexión inclinada pliométrica
+incline-push-up-on-box | Flexión inclinada sobre cajón
+incline-reverse-grip-push-up | Flexión inclinada con agarre invertido
+isometric-chest-squeeze | Apretón isométrico de pecho
+isometric-wipers | Limpiaparabrisas isométrico en flexión
+kettlebell-alternating-press-on-floor | Press alterno en el suelo con kettlebells
+kettlebell-extended-range-one-arm-press-on-floor | Press a una mano en el suelo con kettlebell, rango extendido
+kettlebell-one-arm-floor-press | Press en el suelo a una mano con kettlebell
+kettlebell-plyo-push-up | Flexión pliométrica con kettlebell
+korean-dips | Fondos coreanos
+lever-chest-press-0577 | Press de pecho en máquina (variante)
+lever-decline-chest-press | Press de pecho declinado en máquina
+lever-incline-chest-press-v-2 | Press de pecho inclinado en máquina (variante)
+lever-incline-chest-press | Press de pecho inclinado en máquina
+lever-standing-chest-press | Press de pecho de pie en máquina
+machine-inner-chest-press | Press de pecho interno en máquina
+medicine-ball-chest-pass | Pase de pecho con balón medicinal
+medicine-ball-chest-push-from-3-point-stance | Empuje de pecho con balón medicinal desde tres apoyos
+medicine-ball-chest-push-multiple-response | Empujes de pecho repetidos con balón medicinal
+medicine-ball-chest-push-single-response | Empuje de pecho simple con balón medicinal
+medicine-ball-chest-push-with-run-release | Empuje de pecho con balón medicinal y carrera
+modified-hindu-push-up-male | Flexión hindú modificada
+plyo-push-up | Flexión pliométrica
+push-and-pull-bodyweight | Empuje y tirón con peso corporal
+push-up-bosu-ball | Flexión sobre bosu
+push-up-medicine-ball | Flexión sobre balón medicinal
+push-up-on-bosu-ball | Flexión sobre bosu (variante)
+push-up-on-stability-ball-0656 | Flexión sobre fitball (variante)
+push-up-on-stability-ball | Flexión sobre fitball
+push-up-plus | Flexión plus (con protracción escapular)
+push-up-wall-v-2 | Flexión en la pared (variante)
+raise-single-arm-push-up | Flexión a un brazo con elevación
+resistance-band-seated-chest-press | Press de pecho sentado con banda
+roller-seated-shoulder-flexor-depresor-retractor | Movilidad de hombro sentado con rodillo
+roller-seated-single-leg-shoulder-flexor-depresor-retractor | Movilidad de hombro sentado con rodillo a una pierna
+shoulder-tap-push-up | Flexión con toque de hombro
+single-arm-push-up | Flexión a un brazo
+smith-bench-press | Press de banca en Smith
+smith-decline-bench-press | Press de banca declinado en Smith
+smith-decline-reverse-grip-press | Press declinado en Smith, agarre supino
+smith-incline-bench-press | Press inclinado en Smith
+smith-incline-reverse-grip-press | Press inclinado en Smith, agarre supino
+smith-machine-reverse-decline-close-grip-bench-press | Press de banca declinado cerrado en Smith, agarre supino
+smith-reverse-grip-press | Press de banca en Smith, agarre supino
+smith-wide-grip-bench-press | Press de banca en Smith, agarre abierto
+smith-wide-grip-decline-bench-press | Press de banca declinado en Smith, agarre abierto
+superman-push-up | Flexión superman
+suspended-push-up | Flexión en suspensión (TRX)
+weighted-drop-push-up | Flexión con caída y lastre
+weighted-straight-bar-dip | Fondos en barra recta con lastre
+weighted-svend-press | Press Svend con disco
+wide-grip-chest-dip-on-high-parallel-bars | Fondos de pecho abiertos en paralelas altas

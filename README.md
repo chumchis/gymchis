@@ -9,7 +9,7 @@ El progreso se guarda solo en el navegador del dispositivo.
 
 ## Datos
 
-Los 1323 ejercicios y sus animaciones vienen de [ExerciseGymGifsDB](https://github.com/JahelCuadrado/ExerciseGymGifsDB) (v1.2.0, servidos por jsDelivr). Cada uno tiene nivel: **Principiante**, **Habitual**, **Experto** o **Coach**. 215 están curados a mano (nombre en español, nivel y tipo); para el resto `build.py` deduce el nivel del nombre, el equipo y la categoría.
+Los 1323 ejercicios y sus animaciones vienen de [ExerciseGymGifsDB](https://github.com/JahelCuadrado/ExerciseGymGifsDB) (v1.2.0, servidos por jsDelivr). Cada uno tiene nivel: **Principiante**, **Habitual**, **Experto** o **Coach**. Todos tienen nombre en español traducido a mano desde el original en inglés (`names_es.txt`; los 215 curados, en `build.py`). Los curados también tienen nivel y tipo puestos a mano; para el resto `build.py` los deduce del nombre, el equipo y la categoría.
 
 El generador usa todo el catálogo: prioriza el nivel de la persona y el anterior, da el doble de peso a los curados y, en casa, reparte los ejercicios entre su equipo (peso corporal, mancuernas, cuerda, bandas…) para que ninguno quede tapado.
 
