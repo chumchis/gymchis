@@ -1,0 +1,6 @@
+# local dev + build cache
+.claude/
+.cache/
+__pycache__/
+# animated WebP only used by the claude.ai Artifact copy; GitHub Pages loads media from jsDelivr
+img/
