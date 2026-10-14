@@ -139,7 +139,7 @@ weighted-russian-twist-legs-up | Giro ruso con peso y piernas elevadas
 weighted-russian-twist-v-2 | Giro ruso con peso (variante)
 weighted-seated-twist-on-stability-ball | Giro de torso con peso sentado en fitball
 weighted-side-bend-on-stability-ball | Inclinación lateral con peso en fitball
-wind-sprints | Carrera acostado (wind sprints)
+wind-sprints | Carrera colgado en barra
 # Aductores
 assisted-side-lying-adductor-stretch | Estiramiento de aductores de lado con ayuda
 side-plank-hip-adduction | Plancha lateral con aducción (Copenhague)
@@ -190,25 +190,25 @@ smith-reverse-calf-raises-1394 | Elevación de puntas en Smith (variante)
 smith-reverse-calf-raises | Elevación de puntas en Smith
 smith-seated-one-leg-calf-raise | Elevación de talón sentado a una pierna en Smith
 smith-standing-leg-calf-raise | Elevación de talones de pie en Smith
-smith-toe-raise | Elevación sobre las puntas en Smith
+smith-toe-raise | Elevación de talones sentado en Smith
 standing-calf-raise-on-a-staircase | Elevación de talones en un escalón
 standing-calves-calf-stretch | Estiramiento de gemelos de pie
-standing-calves | Gemelos de pie
+standing-calves | Estiramiento de gemelos contra la pared (variante)
 weighted-donkey-calf-raise | Elevación de talones tipo burro con peso
 # Cardio
 astride-jumps-male | Saltos abriendo las piernas
-cycle-cross-trainer | Elíptica con brazos
+cycle-cross-trainer | Bicicleta de aire con brazos
 dumbbell-burpee | Burpee con mancuernas
-half-knee-bends-male | Medias flexiones de rodilla
+half-knee-bends-male | Marcha con rodillas altas
 jack-burpee | Burpee con jumping jack
-push-to-run | Empuje y carrera
+push-to-run | Carrera con impulso de rodilla
 run-equipment | Carrera en cinta
 semi-squat-jump-male | Salto en media sentadilla
 short-stride-run | Carrera de zancada corta
 ski-step | Paso de esquí
 stationary-bike-run-v-3 | Bicicleta estática de pie
-swing-360 | Balanceo de 360°
-wheel-run | Carrera con rueda abdominal
+swing-360 | Balanceo de 360° en barra
+wheel-run | Carrera circular en el sitio
 # Antebrazos
 band-reverse-wrist-curl | Curl de muñeca inverso con banda
 band-wrist-curl | Curl de muñeca con banda
@@ -277,7 +277,7 @@ glute-ham-raise | Elevación glúteo-femoral
 inverse-leg-curl-bench-support | Curl nórdico con apoyo en banco
 inverse-leg-curl-on-pull-up-cable-machine | Curl nórdico en máquina de poleas
 kettlebell-hang-clean | Cargada colgante con kettlebell
-kick-out-sit | Patada desde sentado
+kick-out-sit | Sentadilla en pared con extensión de pierna
 leg-up-hamstring-stretch | Estiramiento de femoral con la pierna arriba
 lever-kneeling-leg-curl | Curl femoral de rodillas en máquina
 lever-lying-two-one-leg-curl | Curl femoral acostado a dos y una pierna en máquina
@@ -320,7 +320,7 @@ barbell-speed-squat | Sentadilla rápida con barra
 barbell-stiff-leg-good-morning | Buenos días con piernas rígidas con barra
 barbell-zercher-squat | Sentadilla Zercher con barra
 basic-toe-touch-male | Toque de pies básico
-bench-hip-extension | Extensión de cadera en banco
+bench-hip-extension | Patada de glúteo en banco
 bent-knee-lying-twist-male | Giro de cadera acostado con rodillas flexionadas
 bodyweight-drop-jump-squat | Sentadilla con salto desde caída
 cable-deadlift | Peso muerto en polea
@@ -338,7 +338,7 @@ exercise-ball-hip-flexor-stretch | Estiramiento de flexor de cadera con fitball
 exercise-ball-one-leg-prone-lower-body-rotation | Rotación de cadera boca abajo a una pierna en fitball
 exercise-ball-one-legged-diagonal-kick-hamstring-curl | Patada diagonal y curl femoral a una pierna en fitball
 flutter-kicks | Tijeras
-frankenstein-squat | Sentadilla Frankenstein
+frankenstein-squat | Sentadilla Frankenstein con barra
 hands-clasped-circular-toe-touch-male | Toque de pies en círculo con manos entrelazadas
 hands-reversed-clasped-circular-toe-touch-male | Toque de pies en círculo con manos entrelazadas hacia afuera
 hug-keens-to-chest | Abrazar las rodillas al pecho
@@ -371,7 +371,7 @@ sled-45-leg-press-back-pov | Prensa de piernas (vista posterior)
 sled-45-leg-press-side-pov | Prensa de piernas (vista lateral)
 sled-45-leg-wide-press | Prensa de piernas con pies abiertos
 sled-closer-hack-squat | Sentadilla hack con pies juntos
-sled-lying-squat | Sentadilla acostado en máquina
+sled-lying-squat | Prensa vertical acostado
 smith-bent-knee-good-morning | Buenos días con rodillas flexionadas en Smith
 smith-deadlift | Peso muerto en Smith
 smith-front-squat-clean-grip | Sentadilla frontal en Smith, agarre de cargada
@@ -484,7 +484,7 @@ dumbbell-cross-body-hammer-curl | Curl martillo cruzado
 dumbbell-hammer-curl-on-exercise-ball | Curl martillo en fitball
 dumbbell-hammer-curl-v-2 | Curl martillo (variante)
 dumbbell-hammer-curls-with-arm-blaster | Curl martillo con aislador
-dumbbell-high-curl | Curl alto con mancuernas
+dumbbell-high-curl | Curl alto con brazos en cruz
 dumbbell-incline-biceps-curl | Curl de bíceps en banco inclinado con mancuernas
 dumbbell-incline-curl-v-2 | Curl en banco inclinado (variante)
 dumbbell-incline-hammer-curl | Curl martillo en banco inclinado
@@ -563,7 +563,7 @@ smith-machine-bicep-curl | Curl de bíceps en Smith
 weighted-seated-bicep-curl-on-stability-ball | Curl de bíceps con peso sentado en fitball
 weighted-standing-curl | Curl de pie con disco
 # Tríceps
-assisted-standing-triceps-extension-with-towel | Extensión de tríceps de pie con toalla asistida
+assisted-standing-triceps-extension-with-towel | Extensión de tríceps con toalla y compañero
 assisted-triceps-dip-kneeling | Fondos de tríceps de rodillas en máquina asistida
 band-close-grip-push-up | Flexión con agarre cerrado y banda
 barbell-decline-close-grip-to-skull-press | Press cerrado a rompecráneos en banco declinado con barra
@@ -584,7 +584,7 @@ barbell-seated-close-grip-behind-neck-triceps-extension | Extensión de tríceps
 barbell-seated-overhead-triceps-extension | Extensión de tríceps sobre la cabeza sentado con barra
 barbell-standing-overhead-triceps-extension | Extensión de tríceps sobre la cabeza de pie con barra
 bench-dip-on-floor | Fondos de tríceps en banco con pies en el suelo
-body-up | Body up (de antebrazos a manos)
+body-up | Plancha de antebrazos a manos
 bodyweight-kneeling-triceps-extension | Extensión de tríceps de rodillas con peso corporal
 cable-alternate-triceps-extension | Extensión de tríceps alterna en polea
 cable-concentration-extension-on-knee | Extensión concentrada de tríceps sobre la rodilla en polea
@@ -647,7 +647,7 @@ dumbbell-tate-press | Press Tate con mancuernas
 dumbbell-tricep-kickback-with-stork-stance | Patada de tríceps sobre una pierna
 dumbbell-twisting-bench-press | Press de banca con giro con mancuernas
 dumbbells-seated-triceps-extension | Extensión de tríceps sentado con dos mancuernas
-elbow-dips | Fondos sobre los codos
+elbow-dips | Fondos en paralelas (variante)
 exercise-ball-dip | Fondos de tríceps en fitball
 exercise-ball-seated-triceps-stretch | Estiramiento de tríceps sentado en fitball
 exercise-ball-supine-triceps-extension | Extensión de tríceps boca arriba en fitball
@@ -686,7 +686,7 @@ three-bench-dip | Fondos entre tres bancos
 triceps-dip-bench-leg | Fondos de tríceps con pies en banco
 triceps-dip-between-benches | Fondos de tríceps entre bancos
 triceps-dip | Fondos de tríceps
-triceps-press | Press de tríceps con peso corporal
+triceps-press | Extensión de tríceps con peso corporal en barra
 triceps-stretch | Estiramiento de tríceps (variante)
 weighted-bench-dip | Fondos en banco con peso
 weighted-three-bench-dips | Fondos entre tres bancos con peso
@@ -820,7 +820,7 @@ smith-upright-row | Remo al mentón en Smith
 standing-behind-neck-press | Press tras la nuca de pie
 weighted-front-raise | Elevación frontal con disco
 weighted-kneeling-step-with-swing | Paso de rodillas a pie con balanceo de peso
-weighted-round-arm | Círculos de brazos con disco
+weighted-round-arm | Volante con disco
 # Trapecios
 band-shrug | Encogimientos con banda
 barbell-shrug | Encogimientos con barra
@@ -855,7 +855,7 @@ barbell-pullover | Pullover con barra
 bench-pull-ups | Dominadas en banco
 cable-bar-lateral-pulldown | Jalón al pecho con barra en polea
 cable-cross-over-lateral-pulldown | Jalón cruzado en polea
-cable-incline-pushdown | Pullover inclinado en polea
+cable-incline-pushdown | Jalón en banco inclinado en polea
 cable-lat-pulldown-full-range-of-motion | Jalón al pecho en polea, recorrido completo
 cable-lateral-pulldown-with-rope-attachment | Jalón al pecho en polea con cuerda
 cable-lateral-pulldown-with-v-bar | Jalón al pecho en polea con barra en V
@@ -952,8 +952,8 @@ dumbbell-reverse-grip-incline-bench-one-arm-row | Remo a una mano en banco incli
 dumbbell-reverse-grip-incline-bench-two-arm-row | Remo a dos manos en banco inclinado, agarre supino
 dumbbell-reverse-grip-row-female | Remo con mancuernas, agarre supino
 dumbbell-side-plank-with-rear-fly | Plancha lateral con apertura posterior
-elbow-lift-reverse-push-up | Flexión invertida con elevación de codos
-elevator | Elevador en barra
+elbow-lift-reverse-push-up | Flexión invertida apoyando los codos
+elevator | Elevador en anillas
 ez-bar-reverse-grip-bent-over-row | Remo inclinado con barra Z, agarre supino
 front-lever-reps | Repeticiones de front lever
 inverted-row-on-bench | Remo invertido en banco
@@ -1071,7 +1071,7 @@ dynamic-chest-stretch-male | Estiramiento dinámico de pecho
 exercise-ball-pike-push-up | Flexión en pica sobre fitball
 floor-fly-with-barbell | Aperturas en el suelo con barra
 full-planche-push-up | Flexión en planche completa
-hands-bike | Bicicleta de brazos
+hands-bike | Ergómetro de brazos
 hyght-dumbbell-fly | Aperturas con mancuernas (variante)
 incline-push-up-depth-jump | Flexión inclinada pliométrica
 incline-push-up-on-box | Flexión inclinada sobre cajón

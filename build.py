@@ -281,8 +281,7 @@ COACH = ["planche", "maltese", "muscle-up", "handstand", "front-lever", "back-le
          "v-sit", "drop-jump", "depth-jump", "straddle", "elevator", "superman-push-up", "front-lever-reps",
          "double-windmill", "advanced-windmill", "standing-wheel-rollerout", "standing-ab-rollerout",
          "bent-press", "lean-planche", "frog-planche", "full-planche", "one-arm-dip",
-         "body-up", "triceps-press", "squat-jerk", "snatch-pull", "back-lever", "wheel-run",
-         "hands-bike", "drop-push-up", "single-leg-squat-pistol", "kettlebell-pistol-squat"]
+         "squat-jerk", "snatch-pull", "back-lever", "drop-push-up", "single-leg-squat-pistol", "kettlebell-pistol-squat"]
 EXPERT = ["pull-up", "pull-ups", "chin-up", "chin-ups", "chin", "dip", "dips", "hanging", "captains-chair",
           "rollerout", "body-saw", "decline-push-up", "diamond-push-up", "pike", "inverse-leg-curl",
           "glute-ham-raise", "sissy-squat", "one-leg-squat", "single-leg-squat", "jackknife", "v-up",
@@ -357,9 +356,18 @@ def level(e):
     return 2
 
 
-# a jump rope or strap at home; battle ropes need a gym
+# a jump rope or strap at home; battle ropes need a gym; DB mislabels a few machines and bars
 EQUIP_FIX = {"calf-stretch-with-rope": "rope", "reclining-big-toe-pose-with-rope": "rope",
-             "standing-hamstring-and-calf-stretch-with-strap": "rope", "battling-ropes": "other"}
+             "standing-hamstring-and-calf-stretch-with-strap": "rope", "battling-ropes": "other",
+             "hands-bike": "machine", "run-equipment": "machine", "frankenstein-squat": "barbell"}
+# Checked against the animations: fixes where slug-based rules guess wrong.
+OVERRIDES = {
+    "hands-bike": {"l": 1, "c": 1, "w": 1}, "standing-archer": {"l": 1}, "body-up": {"l": 2},
+    "triceps-press": {"l": 2, "g": 1}, "wheel-run": {"l": 2, "j": 1, "c": 1, "g": 0}, "swing-360": {"l": 4, "g": 1},
+    "frankenstein-squat": {"l": 3}, "wind-sprints": {"l": 3, "g": 1}, "kick-out-sit": {"t": 1},
+    "standing-calves": {"s": 1, "t": 1}, "assisted-prone-hamstring": {"s": 1, "t": 1, "x": 1},
+    "assisted-standing-triceps-extension-with-towel": {"x": 1},
+}
 
 
 def load_names():
@@ -369,6 +377,19 @@ def load_names():
 
 
 NAMES = load_names()
+
+
+def load_steps():
+    """instrucciones_es.txt: technique steps per exercise, blocks of `slug` + one step per line."""
+    out = {}
+    for block in (HERE / "instrucciones_es.txt").read_text().split("\n\n"):
+        lines = [l.strip() for l in block.splitlines() if l.strip() and not l.startswith("#")]
+        if lines:
+            out[lines[0]] = lines[1:]
+    return out
+
+
+STEPS = load_steps()
 
 
 def infer(e):
@@ -388,7 +409,9 @@ def infer(e):
              # partner-assisted stretches: fine to browse, never auto-planned
              "x": s.startswith("assisted-") and (cat == "stretching" or "stretch" in tok)}
     flags["w"] = flags["c"] and not jump and row["l"] <= 2
+    flags["x"] = flags["x"] or "throw-down" in s  # a partner pushes the legs down
     row.update({k: 1 for k, v in flags.items() if v})
+    row.update(OVERRIDES.get(s, {}))
     return row
 
 
@@ -435,6 +458,10 @@ def main():
     assert not set(NAMES) & {r["id"] for r in rows if r.get("core")}, "curated names live in CURATED"
     dupes = [n for n, c in Counter(r["n"] for r in rows).items() if c > 1]
     assert not dupes, f"two exercises share a name: {dupes}"
+    assert set(STEPS) == set(ids), f"instructions missing for {sorted(set(ids) - set(STEPS))[:5]}, unknown {sorted(set(STEPS) - set(ids))[:5]}"
+    for r in rows:
+        r["i"] = STEPS[r["id"]]
+        assert len(r["i"]) >= 2, f"{r['id']}: needs at least two steps"
 
     (HERE / "img").mkdir(exist_ok=True)
     with ThreadPoolExecutor(8) as pool:
