@@ -100,7 +100,8 @@ textarea { width: 100%; min-height: 84px; resize: vertical; border-radius: 10px;
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 .tile { background: var(--surface); border-radius: var(--r); overflow: hidden; text-align: left; display: grid; }
 .tile img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--media); display: block; }
-.tile span { padding: 10px 12px 12px; font-weight: 600; font-size: .92rem; line-height: 1.25; }
+.tile span { padding: 10px 12px 12px; font-weight: 600; font-size: .92rem; line-height: 1.25; display: grid; gap: 4px; }
+.tile small { font-weight: 500; font-size: .78rem; color: var(--muted); }
 
 /* history */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -219,9 +220,10 @@ function joinZones(zs) {
   const n = zs.map((z, i) => i ? ZONES[z].n.toLowerCase() : ZONES[z].n);
   return n.length > 1 ? n.slice(0, -1).join(', ') + ' y ' + n[n.length - 1] : n[0];
 }
-function holdSecs(p) { return [30, 40, 45][p.level - 1]; }
+function holdSecs(p) { return [30, 40, 45, 60][p.level - 1]; }
+const owned = (x, p) => p.place === 'casa' && p.equip.includes(x.e);
 function rxFor(x, p, base = {}) { // prescription for a main exercise
-  const g = GOALS[p.goal], sets = Math.max(2, g.sets - (p.level === 1 ? 1 : 0));
+  const g = GOALS[p.goal], sets = Math.min(5, Math.max(2, g.sets - (p.level === 1) + (p.level === 4)));
   const it = { id: x.id, k: base.k || 'main', sets: base.sets || sets, rest: base.rest ?? g.rest };
   if (x.t || x.c) it.secs = holdSecs(p); else it.reps = g.reps;
   return it;
@@ -230,13 +232,22 @@ function rxFor(x, p, base = {}) { // prescription for a main exercise
 function makePlan(p, seed = Math.floor(Math.random() * 1e9)) {
   const rnd = rng(seed), used = new Set();
   const pick = cands => {
-    const fresh = cands.filter(x => !used.has(x.id)), list = fresh.length ? fresh : cands;
+    const fresh = cands.filter(x => !used.has(x.id));
+    let list = fresh.length ? fresh : cands;
+    const fit = list.filter(x => x.l >= p.level - 1); // her level and the one below
+    if (fit.length) list = fit;
+    if (p.place === 'casa') { // one equipment at random, so dumbbells or the rope don't drown in 450 bodyweight moves
+      const eqs = [...new Set(list.map(x => x.e))], e = eqs[Math.floor(rnd() * eqs.length)];
+      list = list.filter(x => x.e === e);
+    }
     if (!list.length) return null;
-    const x = list[Math.floor(rnd() * list.length)];
+    const w = x => x.core ? 2 : 1; // hand-checked staples come up twice as often
+    let r = rnd() * list.reduce((s, x) => s + w(x), 0);
+    const x = list.find(y => (r -= w(y)) < 0) || list[list.length - 1];
     used.add(x.id);
     return x;
   };
-  const pool = CAT.filter(x => x.core && allowed(x, p)); // curated set: hand-checked names, levels and flags
+  const pool = CAT.filter(x => !x.x && allowed(x, p));
   const zones = p.zones.length ? p.zones : Object.keys(ZONES);
   const lower = zones.filter(z => LOWER.includes(z)), upper = zones.filter(z => UPPER.includes(z));
   const split = p.days >= 4 && lower.length > 0 && upper.length > 0;
@@ -246,7 +257,8 @@ function makePlan(p, seed = Math.floor(Math.random() * 1e9)) {
     dz = dz.slice(d % dz.length).concat(dz.slice(0, d % dz.length)); // each day leads with a different zone
     const items = [], hit = [];
     const warm = pool.filter(x => x.w), machines = warm.filter(x => MACHINES.includes(x.e));
-    const w1 = p.place === 'gym' && machines.length ? pick(machines) : pick(warm.filter(x => x.c && !MACHINES.includes(x.e)));
+    const homeCardio = pool.filter(x => x.c && !MACHINES.includes(x.e) && (x.w || x.e === 'rope'));
+    const w1 = p.place === 'gym' && machines.length ? pick(machines) : pick(homeCardio);
     if (w1) items.push({ id: w1.id, k: 'warm', sets: 1, secs: MACHINES.includes(w1.e) ? 300 : 40, rest: 10 });
     const w2 = pick(warm.filter(x => !x.c));
     if (w2) items.push({ id: w2.id, k: 'warm', sets: 1, secs: 40, rest: 10 });
@@ -268,7 +280,7 @@ function makePlan(p, seed = Math.floor(Math.random() * 1e9)) {
       items.push(rxFor(x, p));
     }
     if (p.goal === 'grasa') {
-      const fin = pool.filter(x => x.c && x.e === 'bodyweight'), hard = fin.filter(x => !x.w);
+      const fin = pool.filter(x => x.c && ['bodyweight', 'rope'].includes(x.e)), hard = fin.filter(x => !x.w);
       const x = pick(hard.length ? hard : fin);
       if (x) items.push({ id: x.id, k: 'main', sets: p.level === 1 ? 2 : 3, secs: 30, rest: 20 });
     }
@@ -292,8 +304,8 @@ function alternatives(item, p, day) {
   const cur = byId[item.id], taken = new Set(day.items.map(i => i.id));
   const ok = x => allowed(x, p) && !taken.has(x.id) && !!x.s === !!cur.s && !!x.w === !!cur.w && !!x.c === !!cur.c;
   const zone = Object.values(ZONES).find(z => z.m.includes(cur.m));
-  const rank = x => (x.m === cur.m ? 0 : 2) + (x.core ? 0 : 1); // same muscle, curated first
-  return CAT.filter(x => ok(x) && (x.m === cur.m || zone?.m.includes(x.m))).sort((a, b) => rank(a) - rank(b)).slice(0, 20);
+  const rank = x => (x.m === cur.m ? 0 : 4) + (x.l >= p.level - 1 ? 0 : 2) + (x.core ? 0 : 1); // muscle, level, curated
+  return CAT.filter(x => ok(x) && !x.x && (x.m === cur.m || zone?.m.includes(x.m))).sort((a, b) => rank(a) - rank(b)).slice(0, 30);
 }
 
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
@@ -323,9 +335,9 @@ const ON_CLAUDE = !!window.claude?.use;
 const CDN = 'https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.2.0/';
 const anim = x => ON_CLAUDE ? `img/${x.id}.webp` : CDN + x.f;
 const thumb = x => ON_CLAUDE ? `img/${x.id}.webp` : CDN + x.f.replace(/\.gif$/, '.thumb.webp');
-const EQUIP = { bodyweight: 'Peso corporal', dumbbell: 'Mancuernas', band: 'Banda elástica', kettlebell: 'Kettlebell', barbell: 'Barra', 'ez-bar': 'Barra Z', cable: 'Polea', lever: 'Máquina', machine: 'Máquina', smith: 'Máquina Smith', sled: 'Máquina', other: 'Otro' };
+const EQUIP = { bodyweight: 'Peso corporal', dumbbell: 'Mancuernas', rope: 'Cuerda', band: 'Banda elástica', kettlebell: 'Kettlebell', barbell: 'Barra', 'ez-bar': 'Barra Z', cable: 'Polea', lever: 'Máquina', machine: 'Máquina', smith: 'Máquina Smith', sled: 'Máquina', other: 'Otro' };
 const MUSCLE = { glutes: 'Glúteos', abductors: 'Abductores', adductors: 'Aductores', quads: 'Cuádriceps', hamstrings: 'Femorales', calves: 'Gemelos', abs: 'Abdomen', biceps: 'Bíceps', triceps: 'Tríceps', lats: 'Dorsales', 'upper-back': 'Espalda alta', spine: 'Lumbares', traps: 'Trapecios', pectorals: 'Pecho', delts: 'Hombros', cardio: 'Cardio', 'levator-scapulae': 'Cuello' };
-const LEVELS = ['Estoy empezando', 'Entreno a veces', 'Entreno seguido'];
+const LEVELS = ['Principiante', 'Habitual', 'Experto', 'Coach'];
 const KIND = { warm: 'Calentamiento', main: 'Ejercicio', cool: 'Estiramiento' };
 const KG = ['dumbbell', 'kettlebell', 'barbell', 'ez-bar', 'smith', 'sled', 'lever', 'cable', 'machine'];
 const ICON = {
@@ -402,7 +414,7 @@ function lastKg(id) {
 }
 
 // ---------- views ----------
-let view = 'plan', selDay = null, catZone = 'all', catQuery = '', catMine = true;
+let view = 'plan', selDay = null, catZone = 'all', catQuery = '', catMine = true, catEq = 'all';
 const TABS = [['plan', 'Rutina'], ['cat', 'Ejercicios'], ['hist', 'Historial'], ['me', 'Perfil']];
 function render() {
   if (!CAT.length) return;
@@ -417,7 +429,7 @@ function exRow(it, d, i, swap = true) {
   const x = byId[it.id];
   return `<div class="ex">
     <button data-act="detail" data-id="${x.id}" aria-label="Ver ${esc(x.n)}"><img class="thumb" src="${thumb(x)}" alt="" loading="lazy"></button>
-    <div class="grow"><div class="name">${esc(x.n)}</div><div class="meta"><span class="plate ${it.k}"></span>${rx(it)}${it.rest && it.k === 'main' ? ` · descanso ${it.rest} s` : ''}</div></div>
+    <div class="grow"><div class="name">${esc(x.n)}</div><div class="meta"><span class="plate ${it.k}"></span>${rx(it)} · ${EQUIP[x.e]}</div></div>
     ${swap ? `<button class="link small" data-act="swap" data-d="${d}" data-i="${i}">Cambiar</button>` : ''}
   </div>`;
 }
@@ -463,11 +475,11 @@ function catList() {
   const q = catQuery.trim().toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
   const list = CAT.filter(x =>
     (catZone === 'all' || (catZone === 'stretch' ? x.s : catZone === 'cardio' ? x.c : ZONES[catZone].m.includes(x.m) && !x.s)) &&
-    (!catMine || allowed(x, S.profile)) &&
+    (!catMine || allowed(x, S.profile)) && (catEq === 'all' || x.e === catEq) &&
     (!q || x.n.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').includes(q)));
-  return list;
+  return catMine ? list : list.sort((a, b) => allowed(b, S.profile) - allowed(a, S.profile));
 }
-const catGrid = list => list.map(x => `<button class="tile" data-act="detail" data-id="${x.id}"><img src="${thumb(x)}" alt="" loading="lazy"><span>${esc(x.n)}</span></button>`).join('')
+const catGrid = list => list.map(x => `<button class="tile" data-act="detail" data-id="${x.id}"><img src="${thumb(x)}" alt="" loading="lazy"><span>${esc(x.n)}<small>${EQUIP[x.e]} · ${LEVELS[x.l - 1]}</small></span></button>`).join('')
   || '<p class="muted">Nada con ese nombre. Prueba con otra palabra o quita el filtro.</p>';
 function catView() {
   const list = catList();
@@ -476,7 +488,8 @@ function catView() {
   <h1>Ejercicios</h1>
   <input class="search" id="cat-q" type="search" placeholder="Buscar: sentadilla, plancha…" value="${esc(catQuery)}" autocomplete="off">
   <div class="chips">${zones.map(([k, n]) => `<button class="chip" data-act="zone" data-v="${k}" aria-pressed="${catZone === k}">${n}</button>`).join('')}</div>
-  <div class="row"><button class="chip" data-act="mine" aria-pressed="${catMine}">Solo los que puedo hacer</button><span class="muted small" id="cat-n">${list.length} ejercicios</span></div>
+  ${S.profile.place === 'casa' ? `<div class="chips">${['all', 'bodyweight', ...S.profile.equip].map(k => `<button class="chip" data-act="eq" data-v="${k}" aria-pressed="${catEq === k}">${k === 'all' ? 'Todo mi equipo' : EQUIP[k]}</button>`).join('')}</div>` : ''}
+  <div class="row"><button class="chip" data-act="mine" aria-pressed="${catMine}">${S.profile.place === 'casa' ? 'Solo con lo que tengo' : 'Solo los que puedo hacer'}</button><span class="muted small" id="cat-n">${list.length} ejercicios</span></div>
   <div class="grid" id="cat-grid">${catGrid(list)}</div>`;
 }
 
@@ -526,9 +539,9 @@ const STEPS = [
   { k: 'name', q: '¿Cómo te llamas?', text: true },
   { k: 'goal', q: '¿Qué quieres lograr?', opts: Object.entries(GOALS).map(([v, g]) => [v, g.n, g.d]) },
   { k: 'zones', q: '¿Qué zonas quieres trabajar?', hint: 'Elige una o varias.', multi: true, opts: Object.entries(ZONES).map(([v, z]) => [v, z.n]) },
-  { k: 'level', q: '¿Cómo vas con el ejercicio?', opts: [[1, LEVELS[0], 'Ejercicios sencillos y menos series'], [2, LEVELS[1], 'Una o dos veces por semana'], [3, LEVELS[2], 'Varias veces por semana']] },
+  { k: 'level', q: '¿Cuál es tu nivel?', opts: [[1, LEVELS[0], 'Empiezo o vuelvo después de mucho tiempo'], [2, LEVELS[1], 'Entreno una o dos veces por semana'], [3, LEVELS[2], 'Entreno seguido y domino la técnica'], [4, LEVELS[3], 'Barra olímpica y calistenia avanzada']] },
   { k: 'place', q: '¿Dónde vas a entrenar?', opts: [['casa', 'En casa'], ['gym', 'En el gimnasio']] },
-  { k: 'equip', q: '¿Qué tienes en casa?', hint: 'Si no tienes nada, sigue: usamos tu propio peso.', multi: true, empty: true, when: p => p.place === 'casa', opts: [['dumbbell', 'Mancuernas'], ['band', 'Bandas elásticas'], ['kettlebell', 'Kettlebell']] },
+  { k: 'equip', q: '¿Qué tienes en casa?', hint: 'Si no tienes nada, sigue: usamos tu propio peso.', multi: true, empty: true, when: p => p.place === 'casa', opts: [['dumbbell', 'Mancuernas'], ['rope', 'Cuerda para saltar'], ['band', 'Bandas elásticas o ligas'], ['kettlebell', 'Kettlebell']] },
   { k: 'days', q: '¿Cuántos días por semana?', nums: true, opts: [2, 3, 4, 5, 6].map(n => [n, n]) },
   { k: 'minutes', q: '¿Cuánto tiempo por sesión?', opts: [20, 30, 45, 60].map(n => [n, n + ' minutos']) },
   { k: 'noJump', q: '¿Evitamos los saltos?', opts: [[true, 'Sí, bajo impacto', 'Cuida rodillas y no molesta a los vecinos'], [false, 'No hace falta']] },
@@ -582,7 +595,7 @@ function detailSheet(id) {
   const x = byId[id];
   openSheet(`<div class="row"><h2 class="grow">${esc(x.n)}</h2><button class="iconbtn" data-act="close" aria-label="Cerrar">${icon('x')}</button></div>
     <div class="media"><img src="${anim(x)}" alt="Animación de ${esc(x.n)}"></div>
-    <div class="chips"><span class="chip">${MUSCLE[x.m] || x.m}</span><span class="chip">${EQUIP[x.e]}</span><span class="chip">Nivel ${x.l}</span>${x.j ? '<span class="chip">Con salto</span>' : ''}</div>
+    <div class="chips"><span class="chip">${MUSCLE[x.m] || x.m}</span><span class="chip">${EQUIP[x.e]}</span><span class="chip">${LEVELS[x.l - 1]}</span>${x.j ? '<span class="chip">Con salto</span>' : ''}</div>
     <ol>${x.i.map(t => `<li>${esc(t)}</li>`).join('')}</ol>`);
 }
 let swapCtx = null;
@@ -591,7 +604,7 @@ function swapSheet(d, i) {
   swapCtx = { d, i, alts };
   openSheet(`<div class="row"><h2 class="grow">Cambiar por…</h2><button class="iconbtn" data-act="close" aria-label="Cerrar">${icon('x')}</button></div>
     <p class="muted small">En lugar de ${esc(byId[it.id].n)}</p>
-    <div>${alts.map((x, j) => `<button class="ex" style="width:100%;text-align:left" data-act="swap-pick" data-j="${j}"><img class="thumb" src="${thumb(x)}" alt="" loading="lazy"><div class="grow"><div class="name">${esc(x.n)}</div><div class="meta">${MUSCLE[x.m]} · ${EQUIP[x.e]}</div></div><span></span></button>`).join('') || '<p class="muted">No hay otro ejercicio parecido con tu equipo. Puedes ampliar el equipo en Perfil.</p>'}</div>`);
+    <div>${alts.map((x, j) => `<button class="ex" style="width:100%;text-align:left" data-act="swap-pick" data-j="${j}"><img class="thumb" src="${thumb(x)}" alt="" loading="lazy"><div class="grow"><div class="name">${esc(x.n)}</div><div class="meta">${MUSCLE[x.m] || ''} · ${EQUIP[x.e]} · ${LEVELS[x.l - 1]}</div></div><span></span></button>`).join('') || '<p class="muted">No hay otro ejercicio parecido con tu equipo. Puedes ampliar el equipo en Perfil.</p>'}</div>`);
 }
 function applySwap(j) {
   const { d, i, alts } = swapCtx, old = S.plan.days[d].items[i], x = alts[j];
@@ -606,7 +619,7 @@ async function askClaude() {
   if (!text) { status.textContent = 'Escribe primero qué quieres cambiar.'; return; }
   const btn = $('[data-act="ask"]'); btn.disabled = true; status.textContent = 'Claude está rehaciendo tu semana…';
   const p = S.profile;
-  const catalog = CAT.map(x => [x.id, x.n, MUSCLE[x.m], EQUIP[x.e], 'nivel ' + x.l, x.t && 'isométrico', x.c && 'cardio', x.j && 'con salto', x.w && 'calentamiento', x.s && 'estiramiento', x.g && 'solo gimnasio'].filter(Boolean).join('|')).join('\n');
+  const catalog = CAT.map(x => [x.id, x.n, MUSCLE[x.m], EQUIP[x.e], LEVELS[x.l - 1], x.t && 'isométrico', x.c && 'cardio', x.j && 'con salto', x.w && 'calentamiento', x.s && 'estiramiento', x.g && 'solo gimnasio'].filter(Boolean).join('|')).join('\n');
   const prompt = `Eres entrenador personal. Ajusta el plan semanal de esta persona según su pedido.
 
 Perfil: objetivo ${GOALS[p.goal].n}; zonas ${p.zones.map(z => ZONES[z].n).join(', ')}; nivel ${LEVELS[p.level - 1]}; entrena ${p.place === 'casa' ? 'en casa con ' + ['peso corporal', ...p.equip.map(e => EQUIP[e])].join(', ') : 'en el gimnasio'}; ${p.days} días por semana; ${p.minutes} min por sesión; ${p.noJump ? 'sin saltos' : 'saltos permitidos'}.
@@ -793,6 +806,7 @@ document.addEventListener('click', e => {
     undo: () => { [S.plan, S.prev] = [S.prev, S.plan]; selDay = null; save(); render(); },
     ask: askClaude,
     zone: () => { catZone = b.dataset.v; render(); },
+    eq: () => { catEq = b.dataset.v; render(); },
     mine: () => { catMine = !catMine; render(); },
     edit: () => openOnboard(true),
     sound: () => { S.sound = !S.sound; save(); unlockAudio(); P ? drawPlayer() : render(); },

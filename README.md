@@ -9,7 +9,9 @@ El progreso se guarda solo en el navegador del dispositivo.
 
 ## Datos
 
-Los 1323 ejercicios y sus animaciones vienen de [ExerciseGymGifsDB](https://github.com/JahelCuadrado/ExerciseGymGifsDB) (v1.2.0, servidos por jsDelivr). El generador de rutinas usa 215 de ellos, curados a mano con nombres en español, nivel y tipo; el resto se puede ver en *Ejercicios* y elegir al cambiar un ejercicio.
+Los 1323 ejercicios y sus animaciones vienen de [ExerciseGymGifsDB](https://github.com/JahelCuadrado/ExerciseGymGifsDB) (v1.2.0, servidos por jsDelivr). Cada uno tiene nivel: **Principiante**, **Habitual**, **Experto** o **Coach**. 215 están curados a mano (nombre en español, nivel y tipo); para el resto `build.py` deduce el nivel del nombre, el equipo y la categoría.
+
+El generador usa todo el catálogo: prioriza el nivel de la persona y el anterior, da el doble de peso a los curados y, en casa, reparte los ejercicios entre su equipo (peso corporal, mancuernas, cuerda, bandas…) para que ninguno quede tapado.
 
 ## Desarrollo
 

@@ -9,7 +9,7 @@ as small animated WebP in img/.
     python3 build.py            # needs gif2webp (brew install webp)
 
 Line format:  slug | display name | flags
-flags: 1/2/3 level (default 1) · t timed hold · j jump/impact · w warm-up
+flags: 1/2/3/4 level (default 1: principiante, habitual, experto, coach) · t timed hold · j jump/impact · w warm-up
        s cool-down stretch · g needs gym gear (bar, bench, fitball…)
        @equip  overrides the DB equipment
 """
@@ -138,7 +138,7 @@ jack-jump-male | Jumping jacks | j w
 star-jump-male | Saltos de estrella | 2 j
 scissor-jumps-male | Saltos de tijera | 2 j
 burpee | Burpees | 2 j
-jump-rope | Saltar la cuerda | 2 j
+jump-rope | Saltar la cuerda | j @rope
 skater-hops | Saltos de patinador | 2 j
 run | Trote en el sitio | j w
 mountain-climber | Escaladores | 2
@@ -269,27 +269,115 @@ def parse(text):
         yield slug, name, flags.split()
 
 
-ADVANCED = {"planche", "maltese", "muscle", "handstand", "archer", "flag", "pistol", "clap",
-            "impossible", "dragon", "snatch", "jerk", "stalder"}
-JUMPS = {"jump", "jumps", "hop", "hops", "burpee", "skip", "plyo", "bound", "jack", "skater"}
-HOLDS = {"plank", "hold", "isometric", "stretch", "pose"}
+# Levels: 1 principiante · 2 habitual · 3 experto · 4 coach.
+# Rules match whole slug segments ("pull-up" matches "wide-grip-pull-up", not "pull-through").
+COACH = ["planche", "maltese", "muscle-up", "handstand", "front-lever", "back-lever", "flag", "dragon",
+         "one-arm-chin-up", "one-hand-pull-up", "single-arm-push-up", "archer", "clap", "impossible",
+         "stalder", "snatch", "jerk", "power-clean", "clean-and-press", "kipping", "skin-the-cat",
+         "l-pull-up", "gironda", "korean-dips", "ring-dips", "pistol", "weighted-pull-up",
+         "weighted-one-hand", "weighted-straight-bar-dip", "weighted-tricep-dips", "weighted-muscle-up",
+         "overhead-squat", "jefferson", "zercher", "guillotine", "turkish-get-up", "rope-climb", "l-sit",
+         "v-sit", "drop-jump", "depth-jump", "straddle", "elevator", "superman-push-up", "front-lever-reps",
+         "double-windmill", "advanced-windmill", "standing-wheel-rollerout", "standing-ab-rollerout",
+         "bent-press", "lean-planche", "frog-planche", "full-planche", "one-arm-dip",
+         "body-up", "triceps-press", "squat-jerk", "snatch-pull", "back-lever", "wheel-run",
+         "hands-bike", "drop-push-up", "single-leg-squat-pistol", "kettlebell-pistol-squat"]
+EXPERT = ["pull-up", "pull-ups", "chin-up", "chin-ups", "chin", "dip", "dips", "hanging", "captains-chair",
+          "rollerout", "body-saw", "decline-push-up", "diamond-push-up", "pike", "inverse-leg-curl",
+          "glute-ham-raise", "sissy-squat", "one-leg-squat", "single-leg-squat", "jackknife", "v-up",
+          "box-jump", "tuck-jump", "swing", "windmill", "renegade", "thruster", "good-morning",
+          "front-squat", "barbell-deadlift", "pendlay", "inverted-row", "spider-crawl", "plyo",
+          "clean", "hang-clean", "sledge-hammer", "tire-flip", "wide-grip-pull-up", "deep-push-up",
+          "spider-crawl-push-up", "pike-to-cobra-push-up", "battling-ropes", "bear-crawl",
+          "shoulder-tap-push-up", "isometric-wipers", "power-point-plank", "side-bridge-hip-abduction",
+          "push-up-to-side-plank", "suspended-abdominal-fallout", "hyperextension-on-bench", "lunge-with-jump",
+          "jump-squat", "barbell-jump-squat", "skater-hops", "burpee", "jack-burpee", "dumbbell-burpee",
+          "bulgarian", "split-squat", "barbell-lunge", "barbell-step-up",
+          "weighted-sissy-squat", "squat-on-knees", "cossack", "close-grip-push-up", "side-plank-hip-adduction"]
+EASY = ["bench-dip", "bench-dip-knees-bent", "bench-dip-on-floor", "triceps-dips-floor", "three-bench-dip",
+        "scapula-dips", "assisted", "band-assisted", "bent-knees", "knees-bent", "kneeling", "on-knees",
+        "incline-push-up", "push-up-wall", "wall", "potty-squat-with-support", "dumbbell-hammer-curl"]
+BEGINNER_BW = {"crunch", "crunches", "curl", "bridge", "tilt", "heel", "touchers", "calf", "calves", "march",
+               "stretch", "pose", "circles", "walk", "walking", "step", "abduction", "adduction",
+               "abductor", "adductor", "toe", "touch", "bug", "sphinx", "dog", "hug", "rotation",
+               "extension", "hyperextension", "elbow", "twist", "sit", "flutter", "kicks", "lying",
+               "seated", "isometric", "squeeze", "grip", "wrist", "finger", "neck", "tap", "otis"}
+ISOLATION = {"curl", "curls", "raise", "raises", "fly", "flyes", "kickback", "kickbacks", "extension",
+             "shrug", "calf", "wrist", "pronation", "supination", "rotation", "finger", "bend", "twist",
+             "rollerer", "circles", "lift", "crunch"}
+JUMPS = {"jump", "jumps", "hop", "hops", "burpee", "skip", "plyo", "bound", "jack", "skater", "run"}
+HOLDS = {"plank", "hold", "isometric", "stretch", "pose", "squeeze", "carry", "walk", "wipers"}
 GEAR = {"bench", "ball", "bosu", "bar", "bars", "ring", "rings", "suspended", "roller", "wheel",
         "parallel", "pull", "chin", "dip", "dips", "hanging", "captains", "box", "stepbox", "rope",
-        "stability", "medicine", "tire", "sledge"}
+        "stability", "medicine", "tire", "sledge", "board", "staircase", "towel", "chair", "decline", "farmers"}
+
+
+def has(slug, seqs):
+    s = f"-{slug}-"
+    return any(f"-{k}-" in s for k in seqs)
+
+
+def level(e):
+    """1 principiante · 2 habitual · 3 experto · 4 coach, from slug, equipment and category."""
+    s, eq, cat = e["slug"], e["equipment"], e["category"]
+    tok = set(s.split("-"))
+    if has(s, COACH):
+        return 4
+    if cat == "stretching":
+        return 1
+    if has(s, ["behind-neck"]):  # shoulder-unfriendly; only for people who know what they're doing
+        return 3
+    if eq in ("lever", "machine", "cable", "sled") and not has(s, ["sledge-hammer", "deadlift", "inverse-leg-curl"]):
+        return 2 if tok & {"ball", "bosu", "stability", "one"} and eq == "cable" else 1
+    if eq == "band":
+        return 2 if has(s, EXPERT) else 1
+    if cat == "plyometrics" or (has(s, EXPERT) and (not has(s, EASY) or has(s, ["self-assisted"]))):
+        return 3
+    if cat == "cardio":
+        return 2 if tok & JUMPS else 1
+    if eq == "barbell":
+        return 1 if tok & {"curl", "shrug", "calf", "wrist"} and not tok & {"lying", "prone"} else 2
+    if eq in ("dumbbell", "ez-bar", "smith"):
+        if tok & {"ball", "stability", "bosu", "plank", "stork"} and "curl" not in tok or (eq == "ez-bar" and "extension" in tok):
+            return 2
+        return 1 if tok & ISOLATION and not tok & {"press", "squat", "lunge", "deadlift", "row", "step"} else 2
+    if eq == "kettlebell":
+        return 2
+    if eq == "bodyweight":
+        if tok & {"weighted", "mountain", "decline", "farmers"}:
+            return 2
+        if has(s, EASY):
+            return 1 if has(s, ["incline-push-up", "push-up-wall", "kneeling", "wall", "bench-dip-knees-bent",
+                                "bench-dip-on-floor", "triceps-dips-floor"]) else 2
+        if tok & {"weighted", "suspended", "stability", "bosu", "ball", "medicine", "single", "one",
+                  "push", "squat", "lunge", "plank", "raise", "row", "lever", "jump", "sit-up"}:
+            return 2
+        return 1 if tok & BEGINNER_BW else 2
+    return 2
+
+
+# a jump rope or strap at home; battle ropes need a gym
+EQUIP_FIX = {"calf-stretch-with-rope": "rope", "reclining-big-toe-pose-with-rope": "rope",
+             "standing-hamstring-and-calf-stretch-with-strap": "rope", "battling-ropes": "other"}
 
 
 def infer(e):
-    """Flags for a non-curated exercise; a heuristic, only used for browsing and swaps."""
-    s, cat, eq = e["slug"], e["category"], e["equipment"]
+    """Level and flags for a non-curated exercise (heuristic over slug and category)."""
+    s, cat = e["slug"], e["category"]
+    eq = EQUIP_FIX.get(s, e["equipment"])
     tok = set(s.split("-"))
-    adv = tok & ADVANCED or any(k in s for k in ("front-lever", "back-lever", "skin-the-cat", "l-sit", "v-sit"))
-    row = {"id": s, "n": e["name"], "m": e["muscle"], "e": eq,
-           "l": 3 if adv else 1 if cat == "stretching" or eq in ("lever", "machine", "cable", "band") else 2,
+    lv = level(e)
+    jump = cat == "plyometrics" or bool(tok & JUMPS) or has(s, ["jump-rope"])
+    row = {"id": s, "n": e["name"], "m": e["muscle"], "e": eq, "l": max(lv, 2) if jump else lv,
            "i": e["instructions"], "f": e["file"]}
-    flags = {"s": cat == "stretching", "c": cat == "cardio",
-             "j": cat == "plyometrics" or bool(tok & JUMPS),
-             "t": cat in ("stretching", "cardio") or bool(tok & HOLDS) or "wall-sit" in s,
-             "g": eq == "bodyweight" and bool(tok & GEAR)}
+    flags = {"s": cat == "stretching" or bool(tok & {"stretch", "pose"}) and not tok & {"weighted", "lunge"},
+             "c": cat == "cardio",
+             "j": jump,
+             "t": cat in ("stretching", "cardio") or bool(tok & HOLDS) or has(s, ["wall-sit", "march-sit-wall"]),
+             "g": eq in ("bodyweight", "other") and bool(tok & GEAR),
+             # partner-assisted stretches: fine to browse, never auto-planned
+             "x": s.startswith("assisted-") and (cat == "stretching" or "stretch" in tok)}
+    flags["w"] = flags["c"] and not jump and row["l"] <= 2
     row.update({k: 1 for k, v in flags.items() if v})
     return row
 
@@ -319,7 +407,7 @@ def main():
         f = set(flags)
         row = {"id": slug, "n": name, "m": e["muscle"], "core": 1, "f": e["file"],
                "e": next((x[1:] for x in f if x.startswith("@")), e["equipment"]),
-               "l": int(next((x for x in f if x in "123"), 1)),
+               "l": int(next((x for x in f if x in "1234"), 1)),
                "i": e["instructions"]}
         for k in "tjwsg":
             if k in f:

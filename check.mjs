@@ -14,6 +14,8 @@ const profiles = [
   { goal: 'grasa', zones: ['gluteos', 'piernas', 'brazos'], level: 2, place: 'casa', equip: ['dumbbell', 'band'], days: 4, minutes: 45, noJump: false },
   { goal: 'musculo', zones: Object.keys({ gluteos: 1, piernas: 1, abdomen: 1, brazos: 1, espalda: 1, pecho: 1, hombros: 1 }), level: 3, place: 'gym', equip: [], days: 6, minutes: 60, noJump: false },
   { goal: 'salud', zones: ['espalda'], level: 1, place: 'casa', equip: [], days: 2, minutes: 20, noJump: true },
+  { goal: 'tonificar', zones: ['gluteos', 'piernas', 'abdomen', 'brazos'], level: 1, place: 'casa', equip: ['dumbbell', 'rope'], days: 4, minutes: 30, noJump: false },
+  { goal: 'musculo', zones: ['pecho', 'espalda', 'piernas'], level: 4, place: 'gym', equip: [], days: 5, minutes: 60, noJump: false },
 ];
 for (const p of profiles) {
   for (const seed of [1, 2, 3]) {
@@ -25,7 +27,7 @@ for (const p of profiles) {
       for (const it of day.items) {
         const x = byId[it.id];
         assert.ok(L.allowed(x, p), `${x.id} not doable for ${p.place}/${p.level}`);
-        assert.ok(x.core, `${x.id} is not from the curated set`);
+        assert.ok(!x.x, `${x.id} needs a partner`);
         if (p.noJump) assert.ok(!x.j, `${x.id} jumps`);
         assert.ok(it.secs > 0 || /\d/.test(it.reps), 'every item has reps or seconds');
       }
@@ -38,6 +40,21 @@ for (const p of profiles) {
     }
   }
   assert.deepEqual(L.makePlan(p, 7).days, L.makePlan(p, 7).days, 'same seed, same plan');
+  const mains = [1, 2, 3].flatMap(seed => L.makePlan(p, seed).days.flatMap(d => d.items.filter(i => i.k === 'main'))).map(i => byId[i.id]);
+  if (p.level >= 3) { // the generator leans to her own level and the one below
+    const share = mains.filter(x => x.l >= p.level - 1).length / mains.length;
+    assert.ok(share > 0.6, `level ${p.level}: only ${Math.round(share * 100)}% at level ${p.level - 1}+`);
+  }
+  const gear = p.place === 'casa' ? p.equip.filter(e => e !== 'rope') : [];
+  for (const e of gear) { // her gear gets a fair share next to ~450 bodyweight moves (unbalanced, bands would be ~12%)
+    const share = mains.filter(x => x.e === e).length / mains.length, fair = 1 / (gear.length + 1);
+    assert.ok(share > fair / 2, `${e}: only ${Math.round(share * 100)}% of exercises`);
+  }
+  if (p.equip.includes('rope') && !p.noJump) {
+    const all = L.makePlan(p, 7).days.flatMap(d => d.items.map(i => i.id));
+    assert.ok(all.includes('jump-rope'), 'the jump rope gets used');
+  }
+  assert.ok(mains.some(x => !x.core), 'plans draw from the whole catalog, not only the curated set');
   const cools = L.makePlan(p, 7).days.flatMap(d => d.items.filter(i => i.k === 'cool').map(i => i.id));
   assert.ok(new Set(cools).size > 2 || p.days < 2, `stretches vary across the week: ${cools}`);
 }
