@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 
 const html = readFileSync(new URL('index.html', import.meta.url), 'utf8');
 const src = html.match(/<script id="logic">([\s\S]*?)<\/script>/)[1];
-const L = new Function(`${src}; return { setCatalog, makePlan, allowed, alternatives, cleanDays, dayMinutes };`)();
+const L = new Function(`${src}; return { setCatalog, makePlan, allowed, alternatives, cleanDays, dayMinutes, parseBackup, mergeHistory };`)();
 const cat = JSON.parse(readFileSync(new URL('catalog.json', import.meta.url), 'utf8'));
 L.setCatalog(cat);
 const byId = Object.fromEntries(cat.map(x => [x.id, x]));
@@ -69,4 +69,27 @@ assert.equal(days[0].items[0].sets, 6);
 assert.equal(days[0].items[0].rest, 0);
 assert.ok(days[0].items[1].secs && !days[0].items[1].reps);
 assert.equal(L.cleanDays({ days: 'x' }), null);
+
+// Backups round-trip; a foreign or broken file is refused; junk inside is dropped or clamped.
+const prof = profiles[4], plan = L.makePlan(prof, 5);
+const hist = [{ at: 1000, dur: 1800, seed: 5, day: 0, title: 'Glúteos', ex: [{ id: 'push-up', s: [{ r: 12, kg: 2.5 }, { r: 10 }] }, { id: 'jump-rope', s: [{ secs: 40 }] }] }];
+const back = L.parseBackup(JSON.stringify({ app: 'gymchis', version: 1, profile: { name: 'Ana', ...prof }, plan, history: hist }));
+assert.deepEqual(back.history, hist);
+assert.deepEqual(back.profile, { name: 'Ana', ...prof });
+assert.deepEqual(back.plan.days, plan.days);
+assert.equal(back.plan.seed, 5);
+assert.equal(L.parseBackup('nope'), null);
+assert.equal(L.parseBackup(JSON.stringify({ history: hist })), null);
+const junk = L.parseBackup(JSON.stringify({ app: 'gymchis', profile: { ...prof, level: 9 }, plan: { days: 'x' }, history: [
+  null, { at: 'x', ex: [] }, { at: 2000, dur: 1e9, title: '<b>'.repeat(40), ex: [{ id: 7, s: [] }, { id: 'push-up', s: [{ r: -3, kg: 'a' }, { secs: 1e6 }] }] },
+] }));
+assert.equal(junk.profile, null);
+assert.equal(junk.plan, null);
+assert.equal(junk.history.length, 1);
+assert.equal(junk.history[0].dur, 6 * 3600);
+assert.equal(junk.history[0].title.length, 60);
+assert.deepEqual(junk.history[0].ex, [{ id: 'push-up', s: [{ r: 0 }, { secs: 3600 }] }]);
+const merged = L.mergeHistory([{ at: 3, title: 'mine' }, { at: 1 }], [{ at: 3, title: 'theirs' }, { at: 2 }]);
+assert.deepEqual(merged.map(h => h.at), [1, 2, 3]);
+assert.equal(merged[2].title, 'mine');
 console.log('ok');

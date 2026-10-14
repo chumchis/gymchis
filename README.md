@@ -5,7 +5,7 @@ Web app de rutinas de gimnasio pensada para el iPhone: un cuestionario corto (ob
 **Abrir:** https://chumchis.github.io/gymchis/
 En el iPhone: Safari → Compartir → *Agregar a pantalla de inicio*.
 
-El progreso se guarda solo en el navegador del dispositivo.
+El progreso se guarda solo en el navegador del dispositivo. En **Historial → Exportar** se baja una copia (`gymchis-AAAA-MM-DD.json`, con historial, perfil y rutina) que en el iPhone se puede guardar en Archivos o enviar. **Importar** suma los entrenos que falten sin duplicar; en un teléfono nuevo también se puede importar desde la pantalla de bienvenida y recupera el perfil y la rutina.
 
 ## Datos
 

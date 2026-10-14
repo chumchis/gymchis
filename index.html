@@ -169,7 +169,7 @@ details.how ol { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; 
 
 /* sheets */
 .sheet { position: fixed; inset: 0; z-index: 20; background: color-mix(in srgb, #000 45%, transparent); display: grid; align-items: end; }
-.sheet > div { background: var(--bg); border-radius: 20px 20px 0 0; max-height: 88%; overflow-y: auto; padding: 18px 16px calc(24px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 14px; max-width: 600px; width: 100%; margin: 0 auto; }
+.sheet > div { background: var(--bg); border-radius: 20px 20px 0 0; max-height: 88%; overflow-y: auto; padding: 18px 16px calc(24px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 14px; max-width: 600px; width: 100%; box-sizing: border-box; margin: 0 auto; }
 .sheet ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 .confirm { display: grid; gap: 10px; }
 
@@ -181,6 +181,7 @@ details.how ol { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; 
 <div class="layer" id="onboard" hidden></div>
 <div class="layer" id="player" hidden></div>
 <div class="sheet" id="sheet" hidden></div>
+<input type="file" id="import-file" accept=".json,application/json,text/plain" hidden>
 
 <script id="logic">
 // Pure plan logic (no DOM). check.mjs runs this block under node.
@@ -324,6 +325,32 @@ function cleanDays(o) {
   return days.length ? days : null;
 }
 
+// Read a backup file. It is untrusted: bad entries are dropped, numbers clamped, unknown fields ignored.
+function parseBackup(text) {
+  let o; try { o = JSON.parse(text); } catch { return null; }
+  if (o?.app !== 'gymchis' || !Array.isArray(o.history)) return null;
+  const set = s => s?.secs != null ? { secs: clamp(Math.round(+s.secs) || 0, 0, 3600) }
+    : Object.assign({ r: clamp(Math.round(+s?.r) || 0, 0, 999) }, +s?.kg > 0 ? { kg: clamp(Math.round(+s.kg * 10) / 10, 0, 999) } : {});
+  const history = o.history.filter(h => +h?.at > 0 && Array.isArray(h.ex)).slice(-1000).map(h => ({
+    at: +h.at, dur: clamp(Math.round(+h.dur) || 0, 0, 6 * 3600), seed: +h.seed || 0, day: clamp(Math.round(+h.day) || 0, 0, 6),
+    title: String(h.title || 'Entreno').slice(0, 60),
+    ex: h.ex.filter(e => typeof e?.id === 'string' && Array.isArray(e.s)).slice(0, 30).map(e => ({ id: e.id.slice(0, 80), s: e.s.slice(0, 20).map(set) })),
+  }));
+  const p = o.profile, ok = p && GOALS[p.goal] && [1, 2, 3, 4].includes(p.level) && ['casa', 'gym'].includes(p.place)
+    && [2, 3, 4, 5, 6].includes(p.days) && [20, 30, 45, 60].includes(p.minutes);
+  const list = (a, keep) => [...new Set(Array.isArray(a) ? a : [])].filter(keep);
+  const profile = ok ? { name: String(p.name || '').slice(0, 30), goal: p.goal, zones: list(p.zones, z => ZONES[z]), level: p.level, place: p.place,
+    equip: list(p.equip, e => ['dumbbell', 'rope', 'band', 'kettlebell'].includes(e)), days: p.days, minutes: p.minutes, noJump: !!p.noJump } : null;
+  const days = cleanDays(o.plan);
+  const plan = days && { seed: +o.plan.seed || 1, created: +o.plan.created || Date.now(), by: o.plan.by === 'claude' ? 'claude' : 'app',
+    ...(o.plan.note ? { note: String(o.plan.note).slice(0, 600) } : {}), days };
+  return { profile, plan, history };
+}
+// Same workout = same start time; what is already on this phone wins.
+function mergeHistory(mine, theirs) {
+  return [...new Map([...theirs, ...mine].map(h => [h.at, h])).values()].sort((a, b) => a.at - b.at);
+}
+
 function itemSecs(it) { return it.sets * ((it.secs || 40) + it.rest) + 20; } // ~40 s per set of reps, 20 s to switch
 function dayMinutes(day) { return Math.round(day.items.reduce((s, it) => s + itemSecs(it), 0) / 60); }
 </script>
@@ -363,12 +390,13 @@ try { Object.assign(S, JSON.parse(localStorage.getItem(LS)) || {}); } catch {}
 let remote = null, storeMode = 'local', saveTimer = 0, writing = Promise.resolve();
 function save() {
   S.updatedAt = Date.now();
-  S.history = S.history.slice(-150); // keeps the cloud doc well under its 256 KiB cap
+  S.history = S.history.slice(-1000);
   try { localStorage.setItem(LS, JSON.stringify(S)); } catch {}
   if (!remote) return;
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
     const body = JSON.parse(JSON.stringify(S));
+    body.history = body.history.slice(-150); // keeps the cloud doc well under its 256 KiB cap
     writing = writing.then(() => remote.set(body)).catch(e => {
       if (e?.code !== 'unavailable') { remote = null; storeMode = 'local'; if (view === 'me') render(); }
     });
@@ -385,7 +413,9 @@ async function connect() {
     remote = ref; storeMode = 'cloud';
     const d = snap.exists && snap.data();
     if (d && (d.updatedAt || 0) > S.updatedAt) {
+      const mine = S.history; // the cloud keeps only the last 150
       Object.assign(S, JSON.parse(JSON.stringify(d)));
+      S.history = mergeHistory(mine, S.history || []);
       try { localStorage.setItem(LS, JSON.stringify(S)); } catch {}
       if (S.profile && !$('#onboard').hidden && !P) closeOnboard();
       render();
@@ -504,6 +534,8 @@ function histView() {
     <div class="stat"><b class="num">${S.history.length}</b><span class="small muted">entrenos</span></div>
     <div class="stat"><b class="num">${mins}</b><span class="small muted">minutos</span></div>
   </div>
+  <div class="row"><button class="btn ghost grow" data-act="export">Exportar</button><button class="btn ghost grow" data-act="import">Importar</button></div>
+  <p class="small muted">Guarda la copia en Archivos o envíatela. Al importar se suman los entrenos que falten, sin duplicar.</p>
   ${h.length ? h.map(e => `<details class="log">
     <summary><span><b>${esc(e.title)}</b><br><span class="small muted">${fmtDate(e.at)} · ${Math.round(e.dur / 60)} min</span></span><span class="small muted">${e.ex.reduce((s, x) => s + x.s.length, 0)} series</span></summary>
     <ul>${e.ex.map(x => `<li>${esc(byId[x.id]?.n || x.id)}: ${x.s.map(s => s.secs ? secsLabel(s.secs) : `${s.r}${s.kg ? '×' + s.kg + ' kg' : ''}`).join(', ')}</li>`).join('')}</ul>
@@ -531,6 +563,41 @@ function meView() {
     <p class="small muted">${storeMode === 'cloud' ? 'Tu progreso se guarda en tu cuenta de Claude y en este dispositivo.' : 'Tu progreso se guarda en este dispositivo. Si abres la app con tu cuenta de Claude, también queda guardado allí.'}</p>
   </div>
   <p class="small muted">Ejercicios y animaciones de ExerciseGymGifsDB. Si algo duele, para y consulta con un profesional.</p>`;
+}
+
+// ---------- backup ----------
+// A JSON file she keeps in Files or sends to herself: history plus profile and routine.
+async function exportData() {
+  const name = `gymchis-${new Date().toLocaleDateString('sv')}.json`; // sv = YYYY-MM-DD in local time
+  const file = new File([JSON.stringify({ app: 'gymchis', version: 1, exportedAt: new Date().toISOString(), profile: S.profile, plan: S.plan, history: S.history })], name, { type: 'application/json' });
+  if (navigator.canShare?.({ files: [file] })) { // iPhone: share sheet with "Guardar en Archivos", AirDrop, WhatsApp…
+    try { await navigator.share({ files: [file] }); return; } catch (e) { if (e.name === 'AbortError') return; }
+  }
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(file), download: name });
+  a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+let backup = null;
+$('#import-file').addEventListener('change', async e => {
+  const f = e.target.files[0]; e.target.value = '';
+  if (!f) return;
+  backup = parseBackup(await f.text().catch(() => ''));
+  if (!backup) { openSheet(`<h2>No se pudo leer</h2><p>Ese archivo no es una copia de Gymchis.</p><button class="btn block" data-act="close">Cerrar</button>`); return; }
+  const h = backup.history, add = mergeHistory(S.history, h).length - S.history.length, restore = !S.profile && backup.profile;
+  const day = t => new Date(t).toLocaleDateString('es', { day: 'numeric', month: 'short', year: 'numeric' });
+  openSheet(`<h2>Importar copia</h2>
+    <p>${h.length ? `${h.length} ${h.length === 1 ? 'entreno' : 'entrenos'}, del ${day(h[0].at)} al ${day(h[h.length - 1].at)}.` : 'La copia no tiene entrenos.'}
+    ${h.length ? (add ? `${add} ${add === 1 ? 'es nuevo' : 'son nuevos'} en este teléfono.` : 'Ya los tienes todos.') : ''}</p>
+    ${restore ? '<p>También recuperamos tu perfil y tu rutina.</p>' : ''}
+    <p class="small muted">Lo que ya tienes aquí no se borra.</p>
+    ${add || restore ? '<button class="btn primary big block" data-act="import-ok">Importar</button>' : ''}
+    <button class="btn ghost block" data-act="close">${add || restore ? 'Cancelar' : 'Cerrar'}</button>`);
+});
+function applyImport() {
+  const b = backup; backup = null; closeSheet();
+  if (!b) return;
+  S.history = mergeHistory(S.history, b.history);
+  if (!S.profile && b.profile) { S.profile = b.profile; S.plan = b.plan; selDay = null; closeOnboard(); view = 'hist'; }
+  save(); render(); scrollTo(0, 0);
 }
 
 // ---------- onboarding ----------
@@ -563,6 +630,7 @@ function drawStep() {
       <div class="hero-tiles">${['low-glute-bridge-on-floor', 'dumbbell-lateral-raise', 'weighted-front-plank'].map(id => `<img src="${anim(byId[id])}" alt="">`).join('')}</div>
       <p>Responde unas preguntas rápidas y armamos tu semana con ejercicios animados, cronómetro para cada serie y registro de lo que levantas.</p>
       <button class="btn primary big block" data-act="ob-next">Empezar</button>
+      <button class="link" data-act="import">¿Tienes una copia de Gymchis? Impórtala</button>
     </div>`;
     return;
   }
@@ -839,6 +907,9 @@ document.addEventListener('click', e => {
     finish: () => finish(true),
     discard: () => finish(false),
     'close-player': closePlayer,
+    export: exportData,
+    import: () => $('#import-file').click(),
+    'import-ok': applyImport,
   };
   acts[a]?.();
 });
